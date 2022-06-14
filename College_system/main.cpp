@@ -6,6 +6,7 @@
 using namespace std;
 
 /** this is edit */
+/**edit*/
 
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 
