@@ -1,0 +1,286 @@
+# depslib dependency file v1.0
+1653771270 source:c:\users\abuba\desktop\college_system\main.cpp
+	<iostream>
+	<fstream>
+	<windows.h>
+	<cstdlib>
+	"StaffData.h"
+	"Utilities.h"
+	"Student.h"
+
+1652996938 source:c:\users\abuba\desktop\college_system\src\staffdata.cpp
+	"StaffData.h"
+
+1652997958 c:\users\abuba\desktop\college_system\include\staffdata.h
+	<iostream>
+	<iomanip>
+
+1652979961 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\college_system\src\staffdata.cpp
+	"StaffData.h"
+
+1652976787 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\college_system\include\staffdata.h
+	<iostream>
+	<iomanip>
+
+1652980154 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\college_system\main.cpp
+	<iostream>
+	<windows.h>
+	<cstdlib>
+	"StaffData.h"
+	"Utilities.h"
+	"Student.h"
+
+1652978908 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\college_system\src\student.cpp
+	"Student.h"
+
+1652977275 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\college_system\include\student.h
+	"StaffData.h"
+	<fstream>
+
+1652979725 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\college_system\src\utilities.cpp
+	"Utilities.h"
+
+1652977250 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\college_system\include\utilities.h
+	"Student.h"
+	<vector>
+
+1652999937 source:c:\users\moham\desktop\college_system\main.cpp
+	<iostream>
+	<fstream>
+	<windows.h>
+	<cstdlib>
+	"StaffData.h"
+	"Utilities.h"
+	"Student.h"
+
+1652997956 c:\users\moham\desktop\college_system\include\staffdata.h
+	<iostream>
+	<iomanip>
+
+1652998859 c:\users\moham\desktop\college_system\include\utilities.h
+	"Student.h"
+	<vector>
+
+1652997277 c:\users\moham\desktop\college_system\include\student.h
+	"StaffData.h"
+	<fstream>
+
+1652996937 source:c:\users\moham\desktop\college_system\src\staffdata.cpp
+	"StaffData.h"
+
+1652996992 source:c:\users\moham\desktop\college_system\src\student.cpp
+	"Student.h"
+
+1652998859 source:c:\users\moham\desktop\college_system\src\utilities.cpp
+	"Utilities.h"
+
+1652998860 c:\users\abuba\desktop\college_system\include\utilities.h
+	"Student.h"
+	<vector>
+
+1652997278 c:\users\abuba\desktop\college_system\include\student.h
+	"StaffData.h"
+	<fstream>
+
+1652996994 source:c:\users\abuba\desktop\college_system\src\student.cpp
+	"Student.h"
+
+1653675760 source:c:\users\abuba\desktop\college_system\src\utilities.cpp
+	"Utilities.h"
+
+1653771270 source:c:\users\ammar gamal\desktop\finalproject\college_system\main.cpp
+	<iostream>
+	<fstream>
+	<windows.h>
+	<cstdlib>
+	"StaffData.h"
+	"Utilities.h"
+	"Student.h"
+
+1652997958 c:\users\ammar gamal\desktop\finalproject\college_system\include\staffdata.h
+	<iostream>
+	<iomanip>
+
+1652998860 c:\users\ammar gamal\desktop\finalproject\college_system\include\utilities.h
+	"Student.h"
+	<vector>
+
+1652997278 c:\users\ammar gamal\desktop\finalproject\college_system\include\student.h
+	"StaffData.h"
+	<fstream>
+
+1653779217 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\doctors.cpp
+	"Doctors.h"
+
+1653779430 c:\users\ammar gamal\desktop\finalproject\college_system\include\doctors.h
+	"StaffData.h"
+
+1652996938 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\staffdata.cpp
+	"StaffData.h"
+
+1652996994 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\student.cpp
+	"Student.h"
+
+1653675760 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\utilities.cpp
+	"Utilities.h"
+
+1653779430 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\teaching_assistant.cpp
+	"Teaching_Assistant.h"
+
+1653779440 c:\users\ammar gamal\desktop\finalproject\college_system\include\teaching_assistant.h
+	"StaffData.h"
+
+1653779604 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\registration.cpp
+	"Registration.h"
+
+1653779616 c:\users\ammar gamal\desktop\finalproject\college_system\include\registration.h
+	<string>
+
+1653779737 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\departments.cpp
+	"Departments.h"
+
+1653779737 c:\users\ammar gamal\desktop\finalproject\college_system\include\departments.h
+	<string>
+
+1653779973 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\courses.cpp
+	"Courses.h"
+
+1653779973 c:\users\ammar gamal\desktop\finalproject\college_system\include\courses.h
+	<string>
+	<iostream>
+
+1653779973 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\exams.cpp
+	"Exams.h"
+
+1653779973 c:\users\ammar gamal\desktop\finalproject\college_system\include\exams.h
+	<ctime>
+	<string>
+	<iostream>
+
+1653780217 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\pay.cpp
+	"Pay.h"
+
+1653781694 c:\users\ammar gamal\desktop\finalproject\college_system\include\pay.h
+	<iostream>
+	<ctime>
+	<string>
+
+1653780608 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\books.cpp
+	"Books.h"
+
+1653780607 c:\users\ammar gamal\desktop\finalproject\college_system\include\books.h
+	"Doctors.h"
+	"Courses.h"
+	<string>
+	<Pay.h>
+
+1653780607 source:c:\users\ammar gamal\desktop\finalproject\college_system\src\tables.cpp
+	"Tables.h"
+
+1653780624 c:\users\ammar gamal\desktop\finalproject\college_system\include\tables.h
+	<ctime>
+	<iostream>
+
+1653780608 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\books.cpp
+	"Books.h"
+
+1653780607 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\books.h
+	"Doctors.h"
+	"Courses.h"
+	<string>
+	<Pay.h>
+
+1653779430 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\doctors.h
+	"StaffData.h"
+
+1652997958 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\staffdata.h
+	<iostream>
+	<iomanip>
+
+1653779973 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\courses.h
+	<string>
+	<iostream>
+
+1653781694 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\pay.h
+	<iostream>
+	<ctime>
+	<string>
+
+1653781301 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\cash.cpp
+	"Cash.h"
+
+1653781694 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\cash.h
+	<Pay.h>
+
+1653779973 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\courses.cpp
+	"Courses.h"
+
+1653781309 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\credit.cpp
+	"Credit.h"
+
+1653781694 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\credit.h
+	<Pay.h>
+	<string>
+
+1653779737 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\departments.cpp
+	"Departments.h"
+
+1653779737 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\departments.h
+	<string>
+
+1653779217 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\doctors.cpp
+	"Doctors.h"
+
+1653779973 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\exams.cpp
+	"Exams.h"
+
+1653779973 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\exams.h
+	<ctime>
+	<string>
+	<iostream>
+
+1653781694 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\pay.cpp
+	"Pay.h"
+
+1653779604 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\registration.cpp
+	"Registration.h"
+
+1653779616 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\registration.h
+	<string>
+
+1652996938 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\staffdata.cpp
+	"StaffData.h"
+
+1652996994 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\student.cpp
+	"Student.h"
+
+1652997278 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\student.h
+	"StaffData.h"
+	<fstream>
+
+1653780607 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\tables.cpp
+	"Tables.h"
+
+1653780624 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\tables.h
+	<ctime>
+	<iostream>
+
+1653779430 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\teaching_assistant.cpp
+	"Teaching_Assistant.h"
+
+1653779440 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\teaching_assistant.h
+	"StaffData.h"
+
+1653675760 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\src\utilities.cpp
+	"Utilities.h"
+
+1652998860 f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\include\utilities.h
+	"Student.h"
+	<vector>
+
+1655246458 source:f:\ali\fci\year_1_term_1\programming ii\assignments\final project\finalproject\college_system\main.cpp
+	<cstdlib>
+	<windows.h>
+	<cstring>
+	<bits/stdc++.h>
+
