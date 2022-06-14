@@ -47,6 +47,7 @@ int get_menu_choise(string menu, int level = 0)
     return c;
 }
 
+/**Handling Sign in as Student */
 void sub_sub_menu_1_sign_in_stduent()
 {
     int c = -1;
@@ -77,6 +78,7 @@ void sub_sub_menu_1_sign_in_stduent()
     }
 }
 
+/**Handling Sign in as Teaching Assistant */
 void sub_sub_menu_1_sign_in_teaching_assistant()
 {
     int c = -1;
@@ -111,6 +113,7 @@ void sub_sub_menu_1_sign_in_teaching_assistant()
     }
 }
 
+/**Handling Sign in as Doctor */
 void sub_sub_menu_1_sign_in_doctor()
 {
     int c = -1;
@@ -145,6 +148,7 @@ void sub_sub_menu_1_sign_in_doctor()
     }
 }
 
+/**Handling Sign in */
 void sub_menu_1_sign_in()
 {
     int c = -1;
@@ -178,6 +182,7 @@ void sub_menu_1_sign_in()
     }
 }
 
+/**Handling Sign up */
 void sub_menu_2_sign_up()
 {
     int c = -1;
@@ -208,6 +213,7 @@ void sub_menu_2_sign_up()
     }
 }
 
+/** Main Function */
 int main()
 {
 
