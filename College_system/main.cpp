@@ -1,7 +1,7 @@
+#include <bits/stdc++.h>
 #include <cstdlib>
 #include <windows.h>
 #include <cstring>
-#include <bits/stdc++.h>
 #include "HandlingData.h"
 
 using namespace std;
