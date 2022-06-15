@@ -46,10 +46,8 @@
 		<Unit filename="include/Registration.h" />
 		<Unit filename="include/StaffData.h" />
 		<Unit filename="include/Student.h" />
-		<Unit filename="include/StudentList.h" />
 		<Unit filename="include/Tables.h" />
 		<Unit filename="include/Teaching_Assistant.h" />
-		<Unit filename="include/Utilities.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Books.cpp" />
 		<Unit filename="src/Cash.cpp" />
@@ -63,10 +61,8 @@
 		<Unit filename="src/Registration.cpp" />
 		<Unit filename="src/StaffData.cpp" />
 		<Unit filename="src/Student.cpp" />
-		<Unit filename="src/StudentList.cpp" />
 		<Unit filename="src/Tables.cpp" />
 		<Unit filename="src/Teaching_Assistant.cpp" />
-		<Unit filename="src/Utilities.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

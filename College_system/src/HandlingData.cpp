@@ -7,7 +7,11 @@ HandlingData::HandlingData()
 
 HandlingData::~HandlingData()
 {
-    //dtor
+    for(auto i =0; i<staffcounter; ++i)
+    {
+        delete staff[i];
+    }
+    delete [] staff;
 }
 
 bool HandlingData::sign_in()
