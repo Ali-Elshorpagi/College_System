@@ -6,6 +6,8 @@
 using namespace std;
 
 
+/* This is edit */
+
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 
 inline void wait_or_clear(unsigned int sec, bool clear_screen = false)
