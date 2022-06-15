@@ -4,19 +4,27 @@
 #include"StaffData.h"
 class Doctors:public StaffData
 {
-    public:
-        Doctors();
-        virtual ~Doctors();
-      void AddSalary();
-      void addCourses();
-      void Print();
-    protected:
+public:
+    template <typename type>
+    inline void printline(type msg, bool end_line = true)
+    {
+        cout << msg << (end_line ? "\n" : "\t");
+    }
+    Doctors();
+    virtual ~Doctors();
+    virtual void signUP();
+    virtual bool signIn(string,string);
+    /**************/
+    void AddSalary();
+    void addCourses();
+    void Print();
+protected:
 
-    private:
-        double Salalry;
-        int startYear;
+private:
+    double Salalry;
+    int startYear;
 //        Courses d_course;
-       // Deparment departmentsList
+    // Deparment departmentsList
 };
 
 #endif // DOCTORS_H

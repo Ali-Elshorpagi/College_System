@@ -284,3 +284,122 @@
 	<cstring>
 	<bits/stdc++.h>
 
+1655307633 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\main.cpp
+	<cstdlib>
+	<windows.h>
+	<cstring>
+	<bits/stdc++.h>
+	"HandlingData.h"
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\books.cpp
+	"Books.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\books.h
+	"Doctors.h"
+	"Courses.h"
+	<string>
+	<Pay.h>
+
+1655307662 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\doctors.h
+	"StaffData.h"
+
+1655306677 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\staffdata.h
+	<fstream>
+	<iostream>
+	<iomanip>
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\courses.h
+	<string>
+	<iostream>
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\pay.h
+	<iostream>
+	<ctime>
+	<string>
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\cash.cpp
+	"Cash.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\cash.h
+	<Pay.h>
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\courses.cpp
+	"Courses.h"
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\credit.cpp
+	"Credit.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\credit.h
+	<Pay.h>
+	<string>
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\departments.cpp
+	"Departments.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\departments.h
+	<string>
+
+1655307236 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\doctors.cpp
+	"Doctors.h"
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\exams.cpp
+	"Exams.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\exams.h
+	<ctime>
+	<string>
+	<iostream>
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\pay.cpp
+	"Pay.h"
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\registration.cpp
+	"Registration.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\registration.h
+	<string>
+
+1655303429 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\staffdata.cpp
+	"StaffData.h"
+
+1655307237 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\student.cpp
+	"Student.h"
+
+1655306613 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\student.h
+	"StaffData.h"
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\tables.cpp
+	"Tables.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\tables.h
+	<ctime>
+	<iostream>
+
+1655307633 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\teaching_assistant.cpp
+	"Teaching_Assistant.h"
+
+1655307662 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\teaching_assistant.h
+	"StaffData.h"
+
+1655301471 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\utilities.cpp
+	"Utilities.h"
+
+1655301471 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\utilities.h
+	"Student.h"
+	<vector>
+
+1655307633 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\handlingdata.h
+	"StaffData.h"
+	"Student.h"
+	"Doctors.h"
+	"Teaching_Assistant.h"
+
+1655304282 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\studentlist.cpp
+	"StudentList.h"
+
+1655304611 f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\include\studentlist.h
+	"Student.h"
+
+1655308902 source:f:\ali\fci\year_1_term_1\programming ii\tacs team\college_system\college_system\src\handlingdata.cpp
+	"HandlingData.h"
+

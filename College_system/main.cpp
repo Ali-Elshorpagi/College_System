@@ -2,13 +2,13 @@
 #include <windows.h>
 #include <cstring>
 #include <bits/stdc++.h>
+#include "HandlingData.h"
 
 using namespace std;
 
-
-/* This is edit */
-
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
+
+HandlingData h1;
 
 inline void wait_or_clear(unsigned int sec, bool clear_screen = false)
 {
@@ -27,7 +27,7 @@ inline void printline(type msg, bool end_line = true, int color_code = 15)
 inline void print_try_again()
 {
     printline("\n\n\n\aInvalid Choice Try Again!!!!!!!!", 1, 4);
-    wait_or_clear(3, 1);
+    wait_or_clear(1, 1);
 }
 
 /** MAIN PRINT MENU FUNCTION **/
@@ -57,7 +57,7 @@ void sub_sub_menu_1_sign_in_stduent()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU -> Sing in -> Student ....", 1, 14);
-        c = get_menu_choise("Print Exams,Print Tables,Print Courses", 2);
+        c = get_menu_choise("Print Exams,Print Tables,Add Courses", 2);
         switch (c)
         {
         case 1:
@@ -69,7 +69,7 @@ void sub_sub_menu_1_sign_in_stduent()
             system("pause");
             break;
         case 3:
-            printline("\n\t\tEnter Here Add Print Courses Fun");
+            printline("\n\t\tEnter Here Add Courses Fun");
             system("pause");
             break;
         case 0:
@@ -88,7 +88,7 @@ void sub_sub_menu_1_sign_in_teaching_assistant()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU -> Sing in -> Teaching Assistant ....", 1, 14);
-        c = get_menu_choise("Add Practical Exam,Add Quizes,Add Courses,Print Student Data", 2);
+        c = get_menu_choise("Add Practical Exam,Add Quizes,Add Courses,Print Students Data", 2);
         switch (c)
         {
         case 1:
@@ -104,7 +104,7 @@ void sub_sub_menu_1_sign_in_teaching_assistant()
             system("pause");
             break;
         case 4:
-            printline("\n\t\tEnter Here Add Print Student Data Fun");
+            printline("\n\t\tEnter Here Add Print Students Data Fun");
             system("pause");
             break;
         case 0:
@@ -123,7 +123,7 @@ void sub_sub_menu_1_sign_in_doctor()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU -> Sing in -> Doctor ....", 1, 14);
-        c = get_menu_choise("Add Exam,Add Assignments,Add Courses,Print Student Data", 2);
+        c = get_menu_choise("Add Exam,Add Assignments,Add Courses,Print Students Data", 2);
         switch (c)
         {
         case 1:
@@ -139,7 +139,7 @@ void sub_sub_menu_1_sign_in_doctor()
             system("pause");
             break;
         case 4:
-            printline("\n\t\tEnter Here Add Print Student Data Fun");
+            printline("\n\t\tEnter Here Add Print Students Data Fun");
             system("pause");
             break;
         case 0:
@@ -158,24 +158,63 @@ void sub_menu_1_sign_in()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU ->Log in....", 1, 14);
-        c = get_menu_choise("Sign In as Doctor,Sign In as Student,Sign In Teaching Assistant", 1);
+        c = get_menu_choise("Sign in as Doctor,Sign in as Student,Sign in as Teaching Assistant", 1);
         switch (c)
         {
         case 1:
-            printline("\n\n\t\tEnter here Doctor Log in");
-            sub_sub_menu_1_sign_in_doctor();
+        {
+            /// printline("\n\n\t\tEnter here Doctor Log in");
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing IN -> DOCTOR ....", 1, 14);
+            if(h1.sign_in())
+            {
+                printline("\n\tSuccessfully Logging...^_^",1,2);
+                Sleep(1000);
+                sub_sub_menu_1_sign_in_doctor();
+            }
+            else
+            {
+                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+            }
             system("pause");
-            break;
+        }
+        break;
         case 2:
-            printline("\n\n\t\tEnter here Student Log in");
-            sub_sub_menu_1_sign_in_stduent();
-            system("pause");
-            break;
+        {
+            ///printline("\n\n\t\tEnter here Student Log in");
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing IN -> STUDENT ....", 1, 14);
+            if(h1.sign_in())
+            {
+                printline("\n\tSuccessfully Logging...^_^",1,2);
+                Sleep(1000);
+                sub_sub_menu_1_sign_in_stduent();
+            }
+            else
+            {
+                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+            }
+        }
+        system("pause");
+        break;
         case 3:
-            printline("\n\n\t\tEnter here Teaching Assistant Log in");
-            sub_sub_menu_1_sign_in_teaching_assistant();
+        {
+            ///printline("\n\n\t\tEnter here Teaching Assistant Log in");
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing IN -> TEACHING ASSISANT ....", 1, 14);
+            if(h1.sign_in())
+            {
+                printline("\n\tSuccessfully Logging...^_^",1,2);
+                Sleep(1000);
+                sub_sub_menu_1_sign_in_teaching_assistant();
+            }
+            else
+            {
+               printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+            }
             system("pause");
-            break;
+        }
+        break;
         case 0:
             return;
         default:
@@ -196,15 +235,27 @@ void sub_menu_2_sign_up()
         switch (c)
         {
         case 1:
-            printline("\n\n\t\tEnter here Doctor Log up");
+            ///printline("\n\n\t\tEnter here Doctor Log up");
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing UP -> DOCTOR ....", 1, 14);
+            h1.sign_up(c);
+            printline("\n\tSuccessfully Logging...^_^\n",1,2);
             system("pause");
             break;
         case 2:
-            printline("\n\n\t\tEnter here Doctor Log up");
+            /// printline("\n\n\t\tEnter here Student Log up");
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing UP -> STUDENT ....", 1, 14);
+            h1.sign_up(c);
+            printline("\n\tSuccessfully Logging...^_^\n",1,2);
             system("pause");
             break;
         case 3:
-            printline("\n\n\t\tEnter here Doctor Log up");
+            ///  printline("\n\n\t\tEnter here Teaching Assistant Log up");
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing UP -> TEACHING ASSISANT ....", 1, 14);
+            h1.sign_up(c);
+            printline("\n\tSuccessfully Logging...^_^\n",1,2);
             system("pause");
             break;
         case 0:

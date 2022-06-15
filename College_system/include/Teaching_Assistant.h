@@ -4,18 +4,24 @@
 
 class Teaching_Assistant :public StaffData
 {
-    public:
-        Teaching_Assistant();
-        virtual ~Teaching_Assistant();
+public:
+    template <typename type>
+    inline void printline(type msg, bool end_line = true)
+    {
+        cout << msg << (end_line ? "\n" : "\t");
+    }
+    Teaching_Assistant();
+    virtual ~Teaching_Assistant();
     void addCourses();
     void addSalary();
     void print();
-    protected:
-    private:
-        int start_Year;
-        //Courses ta_course;
-        double salary;
-        //secition ta_section;
+    virtual void signUP();
+    virtual bool signIn(string,string);
+private:
+    int start_Year;
+    //Courses ta_course;
+    double salary;
+    //secition ta_section;
 };
 
 #endif // TEACHING_ASSISTANT_H

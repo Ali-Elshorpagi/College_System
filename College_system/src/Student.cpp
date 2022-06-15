@@ -22,21 +22,33 @@ Student::Student(string id,string name,string phone,string email,string gender,s
     type = "Student";
 }
 
+bool Student::signIn(string user,string pass)
+{
+    if(user == username && pass == password)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 void Student::signUP()
 {
     bool flag = true;
-    cout << "\n\t\t  Username : ";
+    printline("\n\t\tUsername :",false);
     cin >> username;
-    cout << "\t\t  Password : ";
+    printline("\t\tPassword :",false);
     cin >> password;
     do
     {
-        cout << "\t\t  Enter password Again : ";
+        printline("\t\tEnter password Again :",false);
         cin >> passwordvalidaition;
         if(password!=passwordvalidaition)
         {
             flag = false;
-            cout << "\t\t  Unsimilar password ..." << endl;
+            printline("\n\t\tUnsimilar password ...\n");
         }
         else
         {
@@ -44,19 +56,19 @@ void Student::signUP()
         }
     }
     while(!flag);
-     cout<<"\t\t  Enter ID : ";
-     cin>>id;
-     cout<<"\t\t  Enter Name : ";
-     cin.ignore();
-     getline(cin,name);
-     cout<<"\t\t  Enter Email : ";
-     cin>>email;
-     cout<<"\t\t  Enter Phone : ";
-     cin>>phone;
-     cout<<"\t\t  Enter Address : ";
-     cin>>address;
-     cout<<"\t\t  Enter Gender : ";
-     cin>>gender;
+    printline("\t\tEnter ID :",false);
+    cin>>id;
+    printline("\t\tEnter Name :",false);
+    cin.ignore();
+    getline(cin,name);
+    printline("\t\tEnter Email :",false);
+    cin>>email;
+    printline("\t\tEnter Phone :",false);
+    cin>>phone;
+    printline("\t\tEnter Address :",false);
+    cin>>address;
+    printline("\t\tEnter Gender :",false);
+    cin>>gender;
 
 }
 
