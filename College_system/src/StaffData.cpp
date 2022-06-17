@@ -33,3 +33,8 @@ string StaffData::getUser()
 {
     return username;
 }
+
+int StaffData::getTypeId()
+{
+    return typeID;
+}

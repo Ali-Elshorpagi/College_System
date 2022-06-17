@@ -15,6 +15,7 @@ public:
 
     string getPassword();
     string getUser();
+    int getTypeId();
     StaffData();
     virtual ~StaffData();
 
@@ -27,6 +28,7 @@ protected:
     string gender;
     string address;
     string type;
+    int typeID;
     string username;
     string password;
     string passwordvalidaition;

@@ -2,7 +2,8 @@
 
 Teaching_Assistant::Teaching_Assistant()
 {
-    //ctor
+    type = "Teaching_Assistant";
+    typeID = 3;
 }
 
 Teaching_Assistant::~Teaching_Assistant()

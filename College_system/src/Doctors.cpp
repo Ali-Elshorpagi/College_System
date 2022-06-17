@@ -2,7 +2,8 @@
 
 Doctors::Doctors()
 {
-    //ctor
+    type = "Doctor";
+    typeID = 1;
 }
 
 Doctors::~Doctors()

@@ -1,6 +1,7 @@
 #ifndef HANDLINGDATA_H
 #define HANDLINGDATA_H
 #include "StaffData.h"
+#include <windows.h>
 #include "Student.h"
 #include "Doctors.h"
 #include "Teaching_Assistant.h"
@@ -16,8 +17,9 @@ public:
 
     HandlingData();
     virtual ~HandlingData();
-    bool sign_in();
+    int sign_in();
     void sign_up(int);
+    bool handlePassword(int index);
 
 private:
     StaffData **staff;

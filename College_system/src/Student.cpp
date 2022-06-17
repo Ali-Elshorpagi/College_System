@@ -2,6 +2,7 @@
 
 Student::Student()
 {
+    typeID = 2;
     type = "Student";
 }
 
