@@ -32,7 +32,7 @@ bool HandlingData::sign_in(int flag)
     case 1:
     {
         loadcounter = 0;
-        ifstream in("Doctors.txt");
+        ifstream in("StaffData/Doctors.txt");
         if(in)
         {
             while(!in.eof())
@@ -59,7 +59,7 @@ bool HandlingData::sign_in(int flag)
     case 2:
     {
         loadcounter = 0;
-        ifstream in("Students.txt");
+        ifstream in("StaffData/Students.txt");
         if(in)
         {
             while(!in.eof())
@@ -86,7 +86,7 @@ bool HandlingData::sign_in(int flag)
     case 3:
     {
         loadcounter = 0;
-        ifstream in("Teaching Assistants.txt");
+        ifstream in("StaffData/Teaching Assistants.txt");
         if(in)
         {
             while(!in.eof())
@@ -123,7 +123,7 @@ void HandlingData::sign_up(int flag)
         staff[staffcounter] = new Doctors;
         staff[staffcounter]->signUP();
         ofstream out;
-        out.open("Doctors.txt",ios::app);
+        out.open("StaffData/Doctors.txt",ios::app);
         staff[staffcounter++]->SaveToFile(out);
         out.close();
     }
@@ -133,7 +133,7 @@ void HandlingData::sign_up(int flag)
         staff[staffcounter] = new Student;
         staff[staffcounter]->signUP();
         ofstream out;
-        out.open("Students.txt",ios::app);
+        out.open("StaffData/Students.txt",ios::app);
         staff[staffcounter++]->SaveToFile(out);
         out.close();
     }
@@ -143,7 +143,7 @@ void HandlingData::sign_up(int flag)
         staff[staffcounter] = new Teaching_Assistant;
         staff[staffcounter]->signUP();
         ofstream out;
-        out.open("Teaching Assistants.txt",ios::app);
+        out.open("StaffData/Teaching Assistants.txt",ios::app);
         staff[staffcounter++]->SaveToFile(out);
         out.close();
     }
