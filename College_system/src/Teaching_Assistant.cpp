@@ -77,14 +77,14 @@ void Teaching_Assistant::signUP()
 void Teaching_Assistant::SaveToFile(ofstream& out)
 {
     out <<username<<","
-        << passwordvalidaition<<","
-        << id<<","
+        <<passwordvalidaition<<","
+        <<id<<","
         <<name<<","
         <<phone<<","
         <<email<<","
-        <<gender<<","
-        <<address<<","
         <<birthDate<<","
+        <<address<<","
+        <<gender<<","
         <<type<<endl;
 }
 void Teaching_Assistant::LoadFromFile(ifstream& in)
@@ -95,9 +95,9 @@ void Teaching_Assistant::LoadFromFile(ifstream& in)
     getline(in,name,',');
     getline(in,phone,',');
     getline(in,email,',');
-    getline(in,gender,',');
-    getline(in,address,',');
     getline(in,birthDate,',');
+    getline(in,address,',');
+    getline(in,gender,',');
     getline(in,type);
 }
 

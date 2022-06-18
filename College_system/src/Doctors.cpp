@@ -85,9 +85,9 @@ void Doctors::SaveToFile(ofstream& out)
         <<name<<","
         <<phone<<","
         <<email<<","
-        <<gender<<","
-        <<address<<","
         <<birthDate<<","
+        <<address<<","
+        <<gender<<","
         <<type<<endl;
 }
 void Doctors::LoadFromFile(ifstream& in)
@@ -98,9 +98,8 @@ void Doctors::LoadFromFile(ifstream& in)
     getline(in,name,',');
     getline(in,phone,',');
     getline(in,email,',');
-    getline(in,gender,',');
-    getline(in,address,',');
     getline(in,birthDate,',');
+    getline(in,address,',');
+    getline(in,gender,',');
     getline(in,type);
 }
-
