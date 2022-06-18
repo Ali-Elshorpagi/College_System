@@ -13,7 +13,7 @@ Student::~Student()
 
 bool Student::signIn(string user,string pass)
 {
-    if(user == username && pass == password)
+    if(user == username && pass == passwordvalidaition)
     {
         return true;
     }
@@ -58,7 +58,6 @@ void Student::signUP()
     cin.ignore();
     getline(cin, birthDate);
     printline("\t\tEnter Address :",false);
-    cin.ignore();
     getline(cin, address);
     printline("\t\tEnter Gender :",false);
     cin>>gender;
@@ -68,7 +67,7 @@ void Student::SaveToFile(ofstream& out)
 {
     out <<username<<","
         << passwordvalidaition<<","
-        << id<<","
+        <<id<<","
         <<name<<","
         <<phone<<","
         <<email<<","

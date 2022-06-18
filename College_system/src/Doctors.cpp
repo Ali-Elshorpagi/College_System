@@ -26,7 +26,7 @@ void Doctors::Print()
 
 bool Doctors::signIn(string user,string pass)
 {
-    if(user == username && pass == password)
+    if(user == username && pass == passwordvalidaition)
     {
         return true;
     }
@@ -71,7 +71,6 @@ void Doctors::signUP()
     cin.ignore();
     getline(cin, birthDate);
     printline("\t\tEnter Address :",false);
-    cin.ignore();
     getline(cin, address);
     printline("\t\tEnter Gender :",false);
     cin>>gender;

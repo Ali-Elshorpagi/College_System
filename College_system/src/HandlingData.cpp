@@ -3,6 +3,7 @@ int HandlingData::staffcounter = 0;
 HandlingData::HandlingData()
 {
     staff = new StaffData*[500];
+    staffLoad = new StaffData*[500];
 }
 
 HandlingData::~HandlingData()
@@ -12,6 +13,11 @@ HandlingData::~HandlingData()
         delete staff[i];
     }
     delete [] staff;
+    for(auto i =0; i<loadcounter; ++i)
+    {
+        delete staffLoad[i];
+    }
+    delete [] staffLoad;
 }
 
 bool HandlingData::sign_in(int flag)
@@ -21,14 +27,91 @@ bool HandlingData::sign_in(int flag)
     cin >> user;
     printline("\t\tPassword :",false);
     cin >> pass;
-    for(int i=0; i<staffcounter; ++i)
+    switch(flag)
     {
-        if(staff[i]->signIn(user,pass))
+    case 1:
+    {
+        loadcounter = 0;
+        ifstream in("Doctors.txt");
+        if(in)
         {
-            return true;
+            while(!in.eof())
+            {
+                staffLoad[loadcounter] = new Doctors;
+                staffLoad[loadcounter++]->LoadFromFile(in);
+            }
+            in.close();
+            for(int i=0; i<loadcounter-1; ++i)
+            {
+                if(staffLoad[i]->signIn(user,pass))
+                {
+                    return true;
+                }
+            }
         }
+        else
+        {
+            printline("\n\tThere is No User Yet...");
+        }
+        return false;
     }
-    return false;
+    break;
+    case 2:
+    {
+        loadcounter = 0;
+        ifstream in("Students.txt");
+        if(in)
+        {
+            while(!in.eof())
+            {
+                staffLoad[loadcounter] = new Student;
+                staffLoad[loadcounter++]->LoadFromFile(in);
+            }
+            in.close();
+            for(int i=0; i<loadcounter-1; ++i)
+            {
+                if(staffLoad[i]->signIn(user,pass))
+                {
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            printline("\n\tThere is No User Yet...");
+        }
+        return false;
+    }
+    break;
+    case 3:
+    {
+        loadcounter = 0;
+        ifstream in("Teaching Assistants.txt");
+        if(in)
+        {
+            while(!in.eof())
+            {
+                staffLoad[loadcounter] = new Teaching_Assistant;
+                staffLoad[loadcounter++]->LoadFromFile(in);
+            }
+            in.close();
+            for(int i=0; i<loadcounter-1; ++i)
+            {
+                if(staffLoad[i]->signIn(user,pass))
+                {
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            printline("\n\tThere is No User Yet...");
+        }
+        return false;
+    }
+    break;
+    }
+
 }
 
 void HandlingData::sign_up(int flag)
@@ -39,10 +122,10 @@ void HandlingData::sign_up(int flag)
     {
         staff[staffcounter] = new Doctors;
         staff[staffcounter]->signUP();
-         ofstream out;
-         out.open("Doctors.txt",ios::app);
-         staff[staffcounter++]->SaveToFile(out);
-         out.close();
+        ofstream out;
+        out.open("Doctors.txt",ios::app);
+        staff[staffcounter++]->SaveToFile(out);
+        out.close();
     }
     break;
     case 2:

@@ -15,7 +15,6 @@ public:
     {
         cout << msg << (end_line ? "\n" : "\t");
     }
-
     HandlingData();
     virtual ~HandlingData();
     bool sign_in(int);

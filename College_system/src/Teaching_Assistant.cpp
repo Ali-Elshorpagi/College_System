@@ -23,7 +23,7 @@ void Teaching_Assistant::print()
 
 bool Teaching_Assistant::signIn(string user,string pass)
 {
-    if(user == username && pass == password)
+    if(user == username && pass == passwordvalidaition)
     {
         return true;
     }
@@ -68,7 +68,6 @@ void Teaching_Assistant::signUP()
     cin.ignore();
     getline(cin, birthDate);
     printline("\t\tEnter Address :",false);
-    cin.ignore();
     getline(cin, address);
     printline("\t\tEnter Gender :",false);
     cin>>gender;
