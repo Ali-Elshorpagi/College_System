@@ -12,11 +12,14 @@ public:
     }
     Teaching_Assistant();
     virtual ~Teaching_Assistant();
+
     void addCourses();
     void addSalary();
     void print();
     virtual void signUP();
     virtual bool signIn(string,string);
+    void SaveToFile(ofstream&);
+    void LoadFromFile(ifstream&);
 private:
     int start_Year;
     //Courses ta_course;

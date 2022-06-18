@@ -191,38 +191,69 @@ void sub_sub_menu_1_sign_in_doctor()
 void sub_menu_1_sign_in()
 {
     int c = -1;
-    int signIn = -1;
     while (c != 0)
     {
         wait_or_clear(0, 1);
-        printline("\n\nMAIN MENU -> LOG IN....", 1, 14);
-        signIn = h1.sign_in();
-        switch(signIn)
+        printline("\n\nMAIN MENU ->Log in....", 1, 14);
+        c = get_menu_choise("Sign in as Doctor,Sign in as Student,Sign in as Teaching Assistant", 1);
+        switch (c)
         {
-        case -2:
-            sub_menu_2_sign_up();
-            break;
         case 1:
-            printline("\n\tSuccessfully Logging...^_^",1,2);
-            Sleep(1000);
-            sub_sub_menu_1_sign_in_doctor();
-            break;
-        case 2:
-            printline("\n\tSuccessfully Logging...^_^",1,2);
-            Sleep(1000);
-            sub_sub_menu_1_sign_in_stduent();
-            break;
-        case 3:
-            printline("\n\tSuccessfully Logging...^_^",1,2);
-            Sleep(1000);
-            sub_sub_menu_1_sign_in_teaching_assistant();
-            break;
-        default :
-            printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
-            break;
+        {
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing IN -> DOCTOR ....", 1, 14);
+            if(h1.sign_in(c))
+            {
+                printline("\n\tSuccessfully Logging...^_^",1,2);
+                Sleep(1000);
+                sub_sub_menu_1_sign_in_doctor();
+            }
+            else
+            {
+                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+            }
+            system("pause");
         }
-        c = get_menu_choise("Try again", 1);
-
+        break;
+        case 2:
+        {
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing IN -> STUDENT ....", 1, 14);
+            if(h1.sign_in(c))
+            {
+                printline("\n\tSuccessfully Logging...^_^",1,2);
+                Sleep(1000);
+                sub_sub_menu_1_sign_in_stduent();
+            }
+            else
+            {
+                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+            }
+        }
+        system("pause");
+        break;
+        case 3:
+        {
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing IN -> TEACHING ASSISANT ....", 1, 14);
+            if(h1.sign_in(c))
+            {
+                printline("\n\tSuccessfully Logging...^_^",1,2);
+                Sleep(1000);
+                sub_sub_menu_1_sign_in_teaching_assistant();
+            }
+            else
+            {
+                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+            }
+            system("pause");
+        }
+        break;
+        case 0:
+            return;
+        default:
+            print_try_again();
+        }
     }
 }
 

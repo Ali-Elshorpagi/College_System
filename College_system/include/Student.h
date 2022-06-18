@@ -10,16 +10,14 @@ public:
     {
         cout << msg << (end_line ? "\n" : "\t");
     }
-    void saveToFile(ofstream& out);
-    void loadFromFile(ifstream& in);
+    void SaveToFile(ofstream&);
+    void LoadFromFile(ifstream&);
     void signUP();
     bool signIn(string,string);
     void print();
     Student();
     Student(string,string,string,string,string,string,string);
     virtual ~Student();
-
-private:
 };
 
 #endif // STUDENT_H

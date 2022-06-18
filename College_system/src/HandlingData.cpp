@@ -14,14 +14,33 @@ HandlingData::~HandlingData()
     delete [] staff;
 }
 
-int HandlingData::sign_in()
+bool HandlingData::sign_in(int con)
 {
+    switch(con)
+    {
+    case 1:
+        {
+            ifstream in("Doctors.txt");
+
+        }
+        break;
+    case 2:
+        {
+
+        }
+        break;
+    case 3:
+        {
+
+        }
+        break;
+    }
     bool flag = 0;
     int s = -1;
     system("cls");
     string Username;
     cout<<endl;
-    printline("\t\t  Sign In");
+    printline("\n\n\tMAIN MENU -> Sign In...");
     do
     {
         printline("\t\t  Username : ",false);
@@ -70,14 +89,14 @@ bool HandlingData::handlePassword(int index)
         if(password == staff[index]->getPassword())
         {
             flag = true;
-            printline("\t\t  Welcome");
+            printline("\t\t  Welcome...");
             Sleep(500);
             return true;
         }
         else
         {
             tryCounter++;
-            printline("\t\t  Invalid Password");
+            printline("\t\t  Invalid Password...");
             flag = false;
         }
     }
@@ -98,18 +117,30 @@ void HandlingData::sign_up(int flag)
     {
         staff[staffcounter] = new Doctors;
         staff[staffcounter++]->signUP();
+         ofstream out;
+         out.open("Doctors.txt",ios::app);
+         staff[staffcounter++]->SaveToFile(out);
+         out.close();
     }
     break;
     case 2:
     {
         staff[staffcounter] = new Student;
-        staff[staffcounter++]->signUP();
+        staff[staffcounter]->signUP();
+        ofstream out;
+        out.open("Students.txt",ios::app);
+        staff[staffcounter++]->SaveToFile(out);
+        out.close();
     }
     break;
     case 3:
     {
         staff[staffcounter] = new Teaching_Assistant;
-        staff[staffcounter++]->signUP();
+        staff[staffcounter]->signUP();
+        ofstream out;
+        out.open("Teaching Assistants.txt",ios::app);
+        staff[staffcounter++]->SaveToFile(out);
+        out.close();
     }
     break;
     }

@@ -11,6 +11,8 @@ class StaffData
 public:
     virtual void print();
     virtual void signUP() = 0;
+    virtual void SaveToFile(ofstream&)=0;
+    virtual void LoadFromFile(ifstream&)=0;
     virtual bool signIn(string,string) = 0;
 
     string getPassword();

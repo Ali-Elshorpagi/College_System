@@ -73,20 +73,23 @@ void Student::signUP()
 
 }
 
-void Student::saveToFile(ofstream& out)
+void Student::SaveToFile(ofstream& out)
 {
-    out << id<<","
+    out <<username<<","
+        << passwordvalidaition<<","
+        << id<<","
         <<name<<","
         <<phone<<","
         <<email<<","
         <<gender<<","
         <<address<<","
         <<age<<","
-        <<type
-        <<endl;
+        <<type<<endl;
 }
-void Student::loadFromFile(ifstream& in)
+void Student::LoadFromFile(ifstream& in)
 {
+    getline(in,username,',');
+    getline(in,passwordvalidaition,',');
     getline(in,id,',');
     getline(in,name,',');
     getline(in,phone,',');

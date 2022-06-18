@@ -73,3 +73,31 @@ void Doctors::signUP()
     cin>>gender;
 }
 
+
+void Doctors::SaveToFile(ofstream& out)
+{
+    out <<username<<","
+        << passwordvalidaition<<","
+        << id<<","
+        <<name<<","
+        <<phone<<","
+        <<email<<","
+        <<gender<<","
+        <<address<<","
+        <<age<<","
+        <<type<<endl;
+}
+void Doctors::LoadFromFile(ifstream& in)
+{
+    getline(in,username,',');
+    getline(in,passwordvalidaition,',');
+    getline(in,id,',');
+    getline(in,name,',');
+    getline(in,phone,',');
+    getline(in,email,',');
+    getline(in,gender,',');
+    getline(in,address,',');
+    getline(in,age,',');
+    getline(in,type);
+}
+

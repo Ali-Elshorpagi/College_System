@@ -14,6 +14,8 @@ public:
     virtual ~Doctors();
     virtual void signUP();
     virtual bool signIn(string,string);
+    void SaveToFile(ofstream&);
+    void LoadFromFile(ifstream&);
     /**************/
     void AddSalary();
     void addCourses();
