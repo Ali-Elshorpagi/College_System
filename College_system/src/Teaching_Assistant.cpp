@@ -60,12 +60,16 @@ void Teaching_Assistant::signUP()
     printline("\t\tEnter Name :",false);
     cin.ignore();
     getline(cin,name);
-    printline("\t\tEnter Email :",false);
-    cin>>email;
     printline("\t\tEnter Phone :",false);
     cin>>phone;
+    printline("\t\tEnter Email :",false);
+    cin>>email;
+    printline("\t\tEnter Birth Date :",false);
+    cin.ignore();
+    getline(cin, birthDate);
     printline("\t\tEnter Address :",false);
-    cin>>address;
+    cin.ignore();
+    getline(cin, address);
     printline("\t\tEnter Gender :",false);
     cin>>gender;
 }
@@ -81,7 +85,7 @@ void Teaching_Assistant::SaveToFile(ofstream& out)
         <<email<<","
         <<gender<<","
         <<address<<","
-        <<age<<","
+        <<birthDate<<","
         <<type<<endl;
 }
 void Teaching_Assistant::LoadFromFile(ifstream& in)
@@ -94,7 +98,7 @@ void Teaching_Assistant::LoadFromFile(ifstream& in)
     getline(in,email,',');
     getline(in,gender,',');
     getline(in,address,',');
-    getline(in,age,',');
+    getline(in,birthDate,',');
     getline(in,type);
 }
 

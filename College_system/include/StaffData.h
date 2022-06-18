@@ -26,7 +26,7 @@ protected:
     string name;
     string phone;
     string email;
-    string age;
+    string birthDate;
     string gender;
     string address;
     string type;

@@ -16,7 +16,6 @@ public:
     bool signIn(string,string);
     void print();
     Student();
-    Student(string,string,string,string,string,string,string);
     virtual ~Student();
 };
 

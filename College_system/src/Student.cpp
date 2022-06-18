@@ -11,18 +11,6 @@ Student::~Student()
     //dtor
 }
 
-Student::Student(string id,string name,string phone,string email,string gender,string address,string age)
-{
-    this->id = id;
-    this->name = name;
-    this->phone = phone;
-    this->email = email;
-    this->address = address;
-    this->gender = gender;
-    this->age = age;
-    type = "Student";
-}
-
 bool Student::signIn(string user,string pass)
 {
     if(user == username && pass == password)
@@ -62,15 +50,18 @@ void Student::signUP()
     printline("\t\tEnter Name :",false);
     cin.ignore();
     getline(cin,name);
-    printline("\t\tEnter Email :",false);
-    cin>>email;
     printline("\t\tEnter Phone :",false);
     cin>>phone;
+    printline("\t\tEnter Email :",false);
+    cin>>email;
+    printline("\t\tEnter Birth Date :",false);
+    cin.ignore();
+    getline(cin, birthDate);
     printline("\t\tEnter Address :",false);
-    cin>>address;
+    cin.ignore();
+    getline(cin, address);
     printline("\t\tEnter Gender :",false);
     cin>>gender;
-
 }
 
 void Student::SaveToFile(ofstream& out)
@@ -83,7 +74,7 @@ void Student::SaveToFile(ofstream& out)
         <<email<<","
         <<gender<<","
         <<address<<","
-        <<age<<","
+        <<birthDate<<","
         <<type<<endl;
 }
 void Student::LoadFromFile(ifstream& in)
@@ -96,7 +87,7 @@ void Student::LoadFromFile(ifstream& in)
     getline(in,email,',');
     getline(in,gender,',');
     getline(in,address,',');
-    getline(in,age,',');
+    getline(in,birthDate,',');
     getline(in,type);
 }
 
