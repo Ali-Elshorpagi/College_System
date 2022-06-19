@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <cstring>
 #include "HandlingData.h"
+#include "ShowData.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ void sub_menu_2_sign_up();
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 
 HandlingData h1;
+ShowData showdata;
 
 inline void wait_or_clear(unsigned int sec, bool clear_screen = false)
 {
@@ -46,9 +48,9 @@ int get_menu_choise(string menu, int level = 0)
         padding += "\t";
 
     while (getline(X, line, ','))
-        printline(padding + to_string(i++) + ". " + line, 1, level + 10);
+        printline(padding + "[" + to_string(i++) + "]." + line, 1, level + 10);
 
-    printline(level ? padding + "0. RETURN BACK" : padding + "0. EXIT APP", 1, 5);
+    printline(level ? padding + "[0].RETURN BACK" : padding + "[0].EXIT APP", 1, 5);
     int c;
     printline("ENTER YOUR CHOICE :", false, 8);
     cin >> c;
@@ -58,8 +60,7 @@ int get_menu_choise(string menu, int level = 0)
 /** Main Function */
 int main()
 {
-
-    printline("START APPLICATION ....", 1, 6);
+    printline("START APPLICATION ....",1, 6);
     wait_or_clear(1, 1);
     int c = -1;
     while (c != 0)
@@ -98,11 +99,11 @@ void sub_sub_menu_1_sign_in_stduent()
         switch (c)
         {
         case 1:
-            printline("\n\t\tEnter Here Add Print Exams Fun");
+            showdata.ShowExams();
             system("pause");
             break;
         case 2:
-            printline("\n\t\tEnter Here Add Print Tables Fun");
+            showdata.ShowTables();
             system("pause");
             break;
         case 3:

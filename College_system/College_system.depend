@@ -467,12 +467,13 @@
 1655582301 f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\include\teaching_assistant.h
 	"StaffData.h"
 
-1655587573 source:f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\main.cpp
+1655664750 source:f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\main.cpp
 	<bits/stdc++.h>
 	<cstdlib>
 	<windows.h>
 	<cstring>
 	"HandlingData.h"
+	"ShowData.h"
 
 1655585484 f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\include\handlingdata.h
 	"StaffData.h"
@@ -488,6 +489,20 @@
 1655588531 source:f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\src\student.cpp
 	"Student.h"
 
-1655589059 source:f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\src\handlingdata.cpp
+1655589137 source:f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\src\handlingdata.cpp
 	"HandlingData.h"
+
+1655645764 source:f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\src\tables.cpp
+	"Tables.h"
+
+1655644530 f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\include\tables.h
+	<iostream>
+	<windows.h>
+
+1655664533 source:f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\src\showdata.cpp
+	"ShowData.h"
+
+1655664533 f:\ali\fci\year_0_term_1\programming ii\tacs team\college_system\college_system\include\showdata.h
+	<iostream>
+	<windows.h>
 

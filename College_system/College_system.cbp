@@ -34,14 +34,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Courses.h" />
 		<Unit filename="include/Doctors.h" />
 		<Unit filename="include/HandlingData.h" />
+		<Unit filename="include/ShowData.h" />
 		<Unit filename="include/StaffData.h" />
 		<Unit filename="include/Student.h" />
 		<Unit filename="include/Teaching_Assistant.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Courses.cpp" />
 		<Unit filename="src/Doctors.cpp" />
 		<Unit filename="src/HandlingData.cpp" />
+		<Unit filename="src/ShowData.cpp" />
 		<Unit filename="src/StaffData.cpp" />
 		<Unit filename="src/Student.cpp" />
 		<Unit filename="src/Teaching_Assistant.cpp" />
