@@ -111,7 +111,7 @@ bool HandlingData::sign_in(int flag)
     }
     break;
     }
-
+    return false;
 }
 
 void HandlingData::sign_up(int flag)
