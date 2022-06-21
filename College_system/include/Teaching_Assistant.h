@@ -13,6 +13,9 @@ public:
     Teaching_Assistant();
     virtual ~Teaching_Assistant();
 
+    void AddPracticalExam();
+    void AddQuizzes();
+
     void addCourses();
     void addSalary();
     void print();

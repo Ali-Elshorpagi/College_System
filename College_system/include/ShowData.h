@@ -18,6 +18,9 @@ public:
 
     void ShowTables();
     void ShowExams();
+    void ShowAssignments();
+    void ShowPracticalExams();
+    void ShowQuizzes();
 
     ShowData();
     virtual ~ShowData();

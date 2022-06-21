@@ -121,6 +121,20 @@ void Doctors::print()
     printline(birthDate);
 }
 
+void Doctors::AddExam()
+{
+    printline("\n\tPut Your Exams Here According To Academic Year..:)\n");
+    Sleep(2000);
+    ShellExecute(NULL, "open","DataBase\\Exams", NULL, NULL, SW_SHOW);
+}
+
+void Doctors::AddAssignments()
+{
+    printline("\n\tPut Your Assignments Here According To Academic Year..:)\n");
+    Sleep(2000);
+    ShellExecute(NULL, "open","DataBase\\Assignments", NULL, NULL, SW_SHOW);
+}
+
 string Doctors::getID()
 {
     return id;

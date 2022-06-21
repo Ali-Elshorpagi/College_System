@@ -117,3 +117,19 @@ void Teaching_Assistant::LoadFromFile(ifstream& in)
     getline(in,type);
 }
 
+
+void Teaching_Assistant::AddPracticalExam()
+{
+    printline("\n\tPut Your Practical Exams Here According To Academic Year..:)\n");
+    Sleep(2000);
+    ShellExecute(NULL, "open","DataBase\\PracticalExams", NULL, NULL, SW_SHOW);
+}
+
+
+void Teaching_Assistant::AddQuizzes()
+{
+    printline("\n\tPut Your Quizzes Here According To Academic Year..:)\n");
+    Sleep(2000);
+    ShellExecute(NULL, "open","DataBase\\Quizzes", NULL, NULL, SW_SHOW);
+}
+

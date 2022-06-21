@@ -16,6 +16,8 @@ public:
     virtual bool signIn(string,string);
     void SaveToFile(ofstream&);
     void LoadFromFile(ifstream&);
+    void AddExam();
+    void AddAssignments();
     void print();
     void AddSalary();
     void addCourses();

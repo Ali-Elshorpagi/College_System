@@ -7,7 +7,6 @@
 #include "Administrator.h"
 #include "Student.h"
 
-
 using namespace std;
 
 void sub_sub_menu_1_sign_in_stduent();
@@ -18,7 +17,8 @@ void sub_menu_2_sign_up();
 
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 
-
+Teaching_Assistant teass;
+Doctors doc;
 Student stu;
 Administrator admin;
 HandlingData h1;
@@ -44,7 +44,6 @@ inline void print_try_again()
     wait_or_clear(1, 1);
 }
 
-/** MAIN PRINT MENU FUNCTION **/
 int get_menu_choise(string menu, int level = 0)
 {
     stringstream X(menu);
@@ -100,7 +99,7 @@ void sub_sub_menu_1_sign_in_stduent()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU -> Sing in -> Student ....", 1, 14);
-        c = get_menu_choise("Print Exams,Print Tables,Add Courses", 2);
+        c = get_menu_choise("Show Exams,Show Tables,Show Assignments,Show Practical Exams,Show Quizzes,Add Courses", 2);
         switch (c)
         {
         case 1:
@@ -112,6 +111,18 @@ void sub_sub_menu_1_sign_in_stduent()
             system("pause");
             break;
         case 3:
+            showdata.ShowAssignments();
+            system("pause");
+            break;
+        case 4:
+            showdata.ShowPracticalExams();
+            system("pause");
+            break;
+        case 5:
+            showdata.ShowQuizzes();
+            system("pause");
+            break;
+        case 6:
             stu.assignCourseToStudent();
             system("pause");
             break;
@@ -130,15 +141,15 @@ void sub_sub_menu_1_sign_in_teaching_assistant()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU -> Sing in -> Teaching Assistant ....", 1, 14);
-        c = get_menu_choise("Add Practical Exam,Add Quizes,Print Students Data", 2);
+        c = get_menu_choise("Add Practical Exam,Add Quizzes,Print Students Data", 2);
         switch (c)
         {
         case 1:
-            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)\n\n",1,12);
+            teass.AddPracticalExam();
             system("pause");
             break;
         case 2:
-            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)\n\n",1,12);
+            teass.AddQuizzes();
             system("pause");
             break;
         case 3:
@@ -164,11 +175,11 @@ void sub_sub_menu_1_sign_in_doctor()
         switch (c)
         {
         case 1:
-            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)\n\n",1,12);
+            doc.AddExam();
             system("pause");
             break;
         case 2:
-            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)  \n\n",1,12);
+            doc.AddAssignments();
             system("pause");
             break;
         case 3:
