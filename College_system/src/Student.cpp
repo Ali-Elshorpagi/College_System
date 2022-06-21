@@ -134,7 +134,7 @@ void Student::print()
 bool Student::LoadCoursesFromFile()
 {
     CoursesList.clear();
-    ifstream in("Courses/Courses.txt");
+    ifstream in("DataBase/Courses/Courses.txt");
     if(in)
     {
         while(!in.eof())

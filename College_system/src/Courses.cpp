@@ -47,7 +47,7 @@ void Courses::addCoursesToDoctor()
     cin>>hours;
     loadcounter = 0;
     string d;
-    ifstream in("StaffData/Doctors.txt");
+    ifstream in("DataBase/StaffData/Doctors.txt");
     if(in)
     {
         while(!in.eof())

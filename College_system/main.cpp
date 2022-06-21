@@ -7,6 +7,7 @@
 #include "Administrator.h"
 #include "Student.h"
 
+
 using namespace std;
 
 void sub_sub_menu_1_sign_in_stduent();
@@ -92,7 +93,6 @@ int main()
     return 0;
 }
 
-/**Handling Sign in as Student */
 void sub_sub_menu_1_sign_in_stduent()
 {
     int c = -1;
@@ -123,7 +123,6 @@ void sub_sub_menu_1_sign_in_stduent()
     }
 }
 
-/**Handling Sign in as Teaching Assistant */
 void sub_sub_menu_1_sign_in_teaching_assistant()
 {
     int c = -1;
@@ -154,7 +153,6 @@ void sub_sub_menu_1_sign_in_teaching_assistant()
     }
 }
 
-/**Handling Sign in as Doctor */
 void sub_sub_menu_1_sign_in_doctor()
 {
     int c = -1;
@@ -185,7 +183,6 @@ void sub_sub_menu_1_sign_in_doctor()
         }
     }
 }
-
 
 void sub_sub_menu_1_sign_in_admin()
 {
@@ -221,8 +218,6 @@ void sub_sub_menu_1_sign_in_admin()
     }
 }
 
-
-/**Handling Sign in */
 void sub_menu_1_sign_in()
 {
     int c = -1;
@@ -309,7 +304,6 @@ void sub_menu_1_sign_in()
     }
 }
 
-/**Handling Sign up */
 void sub_menu_2_sign_up()
 {
     int c = -1;

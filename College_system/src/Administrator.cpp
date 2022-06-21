@@ -17,7 +17,7 @@ void Administrator::assignCourseToDoctor()
 {
     coure[counter].addCoursesToDoctor();
     ofstream out;
-    out.open("Courses/Courses.txt",ios::app);
+    out.open("DataBase/Courses/Courses.txt",ios::app);
     coure[counter++].SaveToFile(out);
     out.close();
 }

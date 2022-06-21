@@ -10,280 +10,6 @@ ShowData::~ShowData()
 
 }
 
-void ShowData::FirstYear_Seme1()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> First Year -> Semester One....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-}
-void ShowData::FirstYear_Seme2()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> First Year -> Semester Two ....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-}
-
-void ShowData::SecondYear_Seme1()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Second Year -> Semester One....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-
-}
-void ShowData::SecondYear_Seme2()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Second Year -> Semester Two....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-}
-
-
-void ShowData::ThirdYear_Seme1()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Third Year -> Semester One....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-}
-
-
-void ShowData::ThirdYear_Seme2()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Third Year -> Semester Two....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-}
-
-void ShowData::FourthYear_Seme1()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Fourth Year -> Semester One....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-}
-void ShowData::FourthYear_Seme2()
-{
-    int n=-1;
-    while(n!=0)
-    {
-        system("cls");
-        printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Fourth Year -> Semester Two....",1,14);
-        printline("\t\t\t[1].Exam 2019 :\n\t\t\t[2].Exam 2020 :\n\t\t\t[3].Exam 2021 :\n\t\t\t[4].Exam 2022 :",1,9);
-        printline("\t\t\t[0].RETURN BACK :",1,5);
-        printline("ENTER YOUR CHOICE :",false,8);
-        cin>>n;
-        switch(n)
-        {
-        case 0:
-            break;
-        case 1:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 2:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\n\tEnter Here Your Function...");
-            system("pause");
-            break;
-        default:
-            printline("\n\n\nInvalid Choice Try Again!!!!!!!!",1,4);
-            Sleep(500);
-        }
-    }
-}
-
-
-
 void ShowData::ShowExams()
 {
     int n=-1;
@@ -304,7 +30,7 @@ void ShowData::ShowExams()
             system("cls");
             printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> First Year ....",1,14);
             int n2 =-1;
-            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,10);
+            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,9);
             printline("\t\t\t[0].RETURN BACK :",1,5);
             printline("ENTER YOUR CHOICE :",false,8);
             cin>>n2;
@@ -313,11 +39,11 @@ void ShowData::ShowExams()
             case 0:
                 break;
             case 1:
-                FirstYear_Seme1();
+                ShellExecute(NULL, "open","DataBase\\Exams\\FirstYear\\SemesterOne", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             case 2:
-                FirstYear_Seme2();
+                ShellExecute(NULL, "open","DataBase\\Exams\\FirstYear\\SemesterTwo", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             default:
@@ -331,7 +57,7 @@ void ShowData::ShowExams()
             system("cls");
             printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Second Year ....",1,14);
             int n2 =-1;
-            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,10);
+            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,9);
             printline("\t\t\t[0].RETURN BACK :",1,5);
             printline("ENTER YOUR CHOICE :",false,8);
             cin>>n2;
@@ -340,11 +66,11 @@ void ShowData::ShowExams()
             case 0:
                 break;
             case 1:
-                SecondYear_Seme1();
+                ShellExecute(NULL, "open","DataBase\\Exams\\SecondYear\\SemesterOne", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             case 2:
-                SecondYear_Seme2();
+                ShellExecute(NULL, "open","DataBase\\Exams\\SecondYear\\SemesterTwo", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             default:
@@ -358,7 +84,7 @@ void ShowData::ShowExams()
             system("cls");
             printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Third Year ....",1,14);
             int n2 =-1;
-            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,10);
+            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,9);
             printline("\t\t\t[0].RETURN BACK :",1,5);
             printline("ENTER YOUR CHOICE :",false,8);
             cin>>n2;
@@ -367,11 +93,11 @@ void ShowData::ShowExams()
             case 0:
                 break;
             case 1:
-                ThirdYear_Seme1();
+                ShellExecute(NULL, "open","DataBase\\Exams\\ThirdYear\\SemesterOne", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             case 2:
-                ThirdYear_Seme2();
+                ShellExecute(NULL, "open","DataBase\\Exams\\ThirdYear\\SemesterTwo", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             default:
@@ -385,7 +111,7 @@ void ShowData::ShowExams()
             system("cls");
             printline("\n\nMAIN MENU -> Sing in -> Student -> Print Exams -> Fourth Year ....",1,14);
             int n2 =-1;
-            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,10);
+            printline("\t\t\t[1].Semester One :\n\t\t\t[2].Semester Two :",1,9);
             printline("\t\t\t[0].RETURN BACK :",1,5);
             printline("ENTER YOUR CHOICE :",false,8);
             cin>>n2;
@@ -394,11 +120,11 @@ void ShowData::ShowExams()
             case 0:
                 break;
             case 1:
-                FourthYear_Seme1();
+                ShellExecute(NULL, "open","DataBase\\Exams\\FourthYear\\SemesterOne", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             case 2:
-                FourthYear_Seme2();
+                ShellExecute(NULL, "open","DataBase\\Exams\\FourthYear\\SemesterTwo", NULL, NULL, SW_SHOW);
                 system("pause");
                 break;
             default:
@@ -444,11 +170,11 @@ void ShowData::ShowTables()
             case 0:
                 break;
             case 1:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\FirstYear\\Semester_One.pdf");
                 system("pause");
                 break;
             case 2:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\FirstYear\\Semester_Two.pdf");
                 system("pause");
                 break;
             default:
@@ -471,11 +197,11 @@ void ShowData::ShowTables()
             case 0:
                 break;
             case 1:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\SecondYear\\Semester_One.pdf");
                 system("pause");
                 break;
             case 2:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\SecondYear\\Semester_Two.pdf");
                 system("pause");
                 break;
             default:
@@ -498,11 +224,11 @@ void ShowData::ShowTables()
             case 0:
                 break;
             case 1:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\ThirdYear\\Semester_One.pdf");
                 system("pause");
                 break;
             case 2:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\ThirdYear\\Semester_Two.pdf");
                 system("pause");
                 break;
             default:
@@ -525,11 +251,11 @@ void ShowData::ShowTables()
             case 0:
                 break;
             case 1:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\FourthYear\\Semester_One.pdf");
                 system("pause");
                 break;
             case 2:
-                printline("\n\n\tEnter Here Your Function...");
+                system("DataBase\\Tables\\FourthYear\\Semester_Two.pdf");
                 system("pause");
                 break;
             default:

@@ -19,24 +19,8 @@ public:
     void ShowTables();
     void ShowExams();
 
-    void FirstYear_Seme1();
-    void FirstYear_Seme2();
-
-    void SecondYear_Seme1();
-    void SecondYear_Seme2();
-
-    void ThirdYear_Seme1();
-    void ThirdYear_Seme2();
-
-    void FourthYear_Seme1();
-    void FourthYear_Seme2();
-
     ShowData();
     virtual ~ShowData();
-
-protected:
-
-private:
 };
 
 #endif // SHOWDATA_H

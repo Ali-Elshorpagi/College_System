@@ -25,7 +25,7 @@ HandlingData::~HandlingData()
 void HandlingData::print()
 {
     loadcounter = 0;
-    ifstream in("StaffData/Students.txt");
+    ifstream in("DataBase/StaffData/Students.txt");
     if(in)
     {
         while(!in.eof())
@@ -59,7 +59,7 @@ bool HandlingData::sign_in(int flag)
     case 1:
     {
         loadcounter = 0;
-        ifstream in("StaffData/Doctors.txt");
+        ifstream in("DataBase/StaffData/Doctors.txt");
         if(in)
         {
             while(!in.eof())
@@ -86,7 +86,7 @@ bool HandlingData::sign_in(int flag)
     case 2:
     {
         loadcounter = 0;
-        ifstream in("StaffData/Students.txt");
+        ifstream in("DataBase/StaffData/Students.txt");
         if(in)
         {
             while(!in.eof())
@@ -113,7 +113,7 @@ bool HandlingData::sign_in(int flag)
     case 3:
     {
         loadcounter = 0;
-        ifstream in("StaffData/Teaching Assistants.txt");
+        ifstream in("DataBase/StaffData/Teaching Assistants.txt");
         if(in)
         {
             while(!in.eof())
@@ -140,7 +140,7 @@ bool HandlingData::sign_in(int flag)
     case 4:
     {
         loadcounter = 0;
-        ifstream in("StaffData/Administrator.txt");
+        ifstream in("DataBase/StaffData/Administrator.txt");
         if(in)
         {
             while(!in.eof())
@@ -177,7 +177,7 @@ void HandlingData::sign_up(int flag)
         staff[staffcounter] = new Doctors;
         staff[staffcounter]->signUP();
         ofstream out;
-        out.open("StaffData/Doctors.txt",ios::app);
+        out.open("DataBase/StaffData/Doctors.txt",ios::app);
         staff[staffcounter++]->SaveToFile(out);
         out.close();
     }
@@ -187,7 +187,7 @@ void HandlingData::sign_up(int flag)
         staff[staffcounter] = new Student;
         staff[staffcounter]->signUP();
         ofstream out;
-        out.open("StaffData/Students.txt",ios::app);
+        out.open("DataBase/StaffData/Students.txt",ios::app);
         staff[staffcounter++]->SaveToFile(out);
         out.close();
     }
@@ -197,7 +197,7 @@ void HandlingData::sign_up(int flag)
         staff[staffcounter] = new Teaching_Assistant;
         staff[staffcounter]->signUP();
         ofstream out;
-        out.open("StaffData/Teaching Assistants.txt",ios::app);
+        out.open("DataBase/StaffData/Teaching Assistants.txt",ios::app);
         staff[staffcounter++]->SaveToFile(out);
         out.close();
     }
@@ -207,7 +207,7 @@ void HandlingData::sign_up(int flag)
         staff[staffcounter] = new Administrator;
         staff[staffcounter]->signUP();
         ofstream out;
-        out.open("StaffData/Administrator.txt",ios::app);
+        out.open("DataBase/StaffData/Administrator.txt",ios::app);
         staff[staffcounter++]->SaveToFile(out);
         out.close();
     }
