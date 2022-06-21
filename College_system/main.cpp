@@ -4,6 +4,8 @@
 #include <cstring>
 #include "HandlingData.h"
 #include "ShowData.h"
+#include "Administrator.h"
+#include "Student.h"
 
 using namespace std;
 
@@ -15,6 +17,9 @@ void sub_menu_2_sign_up();
 
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 
+
+Student stu;
+Administrator admin;
 HandlingData h1;
 ShowData showdata;
 
@@ -107,7 +112,7 @@ void sub_sub_menu_1_sign_in_stduent()
             system("pause");
             break;
         case 3:
-            printline("\n\t\tEnter Here Add Courses Fun");
+            stu.assignCourseToStudent();
             system("pause");
             break;
         case 0:
@@ -126,23 +131,19 @@ void sub_sub_menu_1_sign_in_teaching_assistant()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU -> Sing in -> Teaching Assistant ....", 1, 14);
-        c = get_menu_choise("Add Practical Exam,Add Quizes,Add Courses,Print Students Data", 2);
+        c = get_menu_choise("Add Practical Exam,Add Quizes,Print Students Data", 2);
         switch (c)
         {
         case 1:
-            printline("\n\t\tEnter Here Add Practical Exam Fun");
+            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)\n\n",1,12);
             system("pause");
             break;
         case 2:
-            printline("\n\t\tEnter Here Add Quizes Fun");
+            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)\n\n",1,12);
             system("pause");
             break;
         case 3:
-            printline("\n\t\tEnter Here Add Courses Fun");
-            system("pause");
-            break;
-        case 4:
-            printline("\n\t\tEnter Here Add Print Students Data Fun");
+            h1.print();
             system("pause");
             break;
         case 0:
@@ -161,23 +162,20 @@ void sub_sub_menu_1_sign_in_doctor()
     {
         wait_or_clear(0, 1);
         printline("\n\nMAIN MENU -> Sing in -> Doctor ....", 1, 14);
-        c = get_menu_choise("Add Exam,Add Assignments,Add Courses,Print Students Data", 2);
+        c = get_menu_choise("Add Exam,Add Assignments,Print Students Data", 2);
         switch (c)
         {
         case 1:
-            printline("\n\t\tEnter Here Add Exam Fun");
+            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)\n\n",1,12);
             system("pause");
             break;
         case 2:
-            printline("\n\t\tEnter Here Add Assignments Fun");
+            printline("\n\t\tCommunicate With Developers To Add it in This App ...:)  \n\n",1,12);
             system("pause");
             break;
         case 3:
-            printline("\n\t\tEnter Here Add Courses Fun");
-            system("pause");
-            break;
-        case 4:
-            printline("\n\t\tEnter Here Add Print Students Data Fun");
+            // printline("\n\t\tEnter Here Add Print Students Data Fun");
+            h1.print();
             system("pause");
             break;
         case 0:
@@ -188,6 +186,42 @@ void sub_sub_menu_1_sign_in_doctor()
     }
 }
 
+
+void sub_sub_menu_1_sign_in_admin()
+{
+    int c = -1;
+    while (c != 0)
+    {
+        wait_or_clear(0, 1);
+        printline("\n\nMAIN MENU -> Sing in -> Doctor ....", 1, 14);
+        c = get_menu_choise("Add Courses,Add Fun 1,Add Fun 2,Add Fun 3",2);
+        switch (c)
+        {
+        case 1:
+            admin.assignCourseToDoctor();
+            system("pause");
+            break;
+        case 2:
+            printline("\n\t\tEnter Here Your Fun");
+            system("pause");
+            break;
+        case 3:
+            printline("\n\t\tEnter Here Your Fun");
+            system("pause");
+            break;
+        case 4:
+            printline("\n\t\tEnter Here Your Fun");
+            system("pause");
+            break;
+        case 0:
+            return;
+        default:
+            print_try_again();
+        }
+    }
+}
+
+
 /**Handling Sign in */
 void sub_menu_1_sign_in()
 {
@@ -195,8 +229,8 @@ void sub_menu_1_sign_in()
     while (c != 0)
     {
         wait_or_clear(0, 1);
-        printline("\n\nMAIN MENU ->Log in....", 1, 14);
-        c = get_menu_choise("Sign in as Doctor,Sign in as Student,Sign in as Teaching Assistant", 1);
+        printline("\n\nMAIN MENU ->Sign IN AS ....", 1, 14);
+        c = get_menu_choise("Doctor,Student,Teaching Assistant,Administrator", 1);
         switch (c)
         {
         case 1:
@@ -250,6 +284,23 @@ void sub_menu_1_sign_in()
             system("pause");
         }
         break;
+        case 4:
+        {
+            system("cls");
+            printline("\n\nMAIN MENU -> Sing IN -> Administrator ....", 1, 14);
+            if(h1.sign_in(c))
+            {
+                printline("\n\tSuccessfully Logging...^_^",1,2);
+                Sleep(1000);
+                sub_sub_menu_1_sign_in_admin();
+            }
+            else
+            {
+                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+            }
+            system("pause");
+        }
+        break;
         case 0:
             return;
         default:
@@ -265,9 +316,8 @@ void sub_menu_2_sign_up()
     while (c != 0)
     {
         wait_or_clear(0, 1);
-        printline("\n\nMAIN MENU -> SIGN UP ....", 1, 14);
-        printline("\t\tSelect your role ....",1,14);
-        c = get_menu_choise("Doctor,Student,Teaching Assistant", 1);
+        printline("\n\nMAIN MENU -> SIGN UP AS ....", 1, 14);
+        c = get_menu_choise("Doctor,Student,Teaching Assistant,Administrator", 1);
         switch (c)
         {
         case 1:
@@ -289,6 +339,12 @@ void sub_menu_2_sign_up()
             printline("\n\nMAIN MENU -> SIGN UP -> TEACHING ASSISANT ....", 1, 14);
             h1.sign_up(c);
             printline("\n\tRegistered tSuccessfully...^_^\n",1,2);
+            system("pause");
+            break;
+        case 4:
+            system("cls");
+            printline("\n\nMAIN MENU -> SIGN UP -> Administrator ....", 1, 14);
+            h1.sign_up(c);
             system("pause");
             break;
         case 0:

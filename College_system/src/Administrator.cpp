@@ -1,43 +1,28 @@
-#include "Teaching_Assistant.h"
+#include "Administrator.h"
 
-Teaching_Assistant::Teaching_Assistant()
-{
-    type = "Teaching_Assistant";
-    typeID = 3;
-}
+int Administrator::counter =0;
 
-Teaching_Assistant::~Teaching_Assistant()
+Administrator::Administrator()
 {
-    //dtor
-}
-void Teaching_Assistant::addCourses()
-{
-}
-void Teaching_Assistant::addSalary()
-{
-}
-void Teaching_Assistant::print()
-{
-    printline("\t\tType :",false);
-    printline(type);
-    printline("\n\t\tID :",false);
-    printline(id);
-    printline("\t\tName :",false);
-    printline(name);
-    printline("\t\tPhone :",false);
-    printline(phone);
-    printline("\t\tEmail :",false);
-    printline(email);
-    printline("\t\tGender :",false);
-    printline(gender);
-    printline("\t\tAddress :",false);
-    printline(address);
-    printline("\t\tBirthDay :",false);
-    printline(birthDate);
+    coure = new Courses[100];
+    type = "Administrator";
 }
 
+Administrator::~Administrator()
+{
+    delete []coure;
+}
 
-bool Teaching_Assistant::signIn(string user,string pass)
+void Administrator::assignCourseToDoctor()
+{
+    coure[counter].addCoursesToDoctor();
+    ofstream out;
+    out.open("Courses/Courses.txt",ios::app);
+    coure[counter++].SaveToFile(out);
+    out.close();
+}
+
+bool Administrator::signIn(string user,string pass)
 {
     if(user == username && pass == passwordvalidaition)
     {
@@ -49,7 +34,7 @@ bool Teaching_Assistant::signIn(string user,string pass)
     }
 }
 
-void Teaching_Assistant::signUP()
+void Administrator::signUP()
 {
     bool flag = true;
     printline("\n\t\tUsername :",false);
@@ -90,7 +75,7 @@ void Teaching_Assistant::signUP()
 }
 
 
-void Teaching_Assistant::SaveToFile(ofstream& out)
+void Administrator::SaveToFile(ofstream& out)
 {
     out <<username<<","
         <<passwordvalidaition<<","
@@ -103,7 +88,8 @@ void Teaching_Assistant::SaveToFile(ofstream& out)
         <<gender<<","
         <<type<<endl;
 }
-void Teaching_Assistant::LoadFromFile(ifstream& in)
+
+void Administrator::LoadFromFile(ifstream& in)
 {
     getline(in,username,',');
     getline(in,passwordvalidaition,',');
@@ -117,3 +103,22 @@ void Teaching_Assistant::LoadFromFile(ifstream& in)
     getline(in,type);
 }
 
+void Administrator::print()
+{
+    printline("\t\tType :",false);
+    printline(type);
+    printline("\n\t\tID :",false);
+    printline(id);
+    printline("\t\tName :",false);
+    printline(name);
+    printline("\t\tPhone :",false);
+    printline(phone);
+    printline("\t\tEmail :",false);
+    printline(email);
+    printline("\t\tGender :",false);
+    printline(gender);
+    printline("\t\tAddress :",false);
+    printline(address);
+    printline("\t\tBirthDay :",false);
+    printline(birthDate);
+}

@@ -6,6 +6,7 @@
 #include "Student.h"
 #include "Doctors.h"
 #include "Teaching_Assistant.h"
+#include "Administrator.h"
 
 class HandlingData
 {
@@ -19,6 +20,7 @@ public:
     virtual ~HandlingData();
     bool sign_in(int);
     void sign_up(int);
+    void print();
     bool handlePassword(int index);
 
 private:

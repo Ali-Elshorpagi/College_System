@@ -92,5 +92,110 @@ void Student::LoadFromFile(ifstream& in)
 
 void Student::print()
 {
-    StaffData::print();
+    printline("\n\t\tType :",false,6);
+    printline(type);
+    printline("\t\tID :",false,6);
+    printline(id);
+    printline("\t\tName :",false,6);
+    printline(name);
+    printline("\t\tPhone :",false,6);
+    printline(phone);
+    printline("\t\tEmail :",false,6);
+    printline(email);
+    printline("\t\tGender :",false,6);
+    printline(gender);
+    printline("\t\tAddress :",false,6);
+    printline(address);
+    printline("\t\tBirthDay :",false,6);
+    printline(birthDate);
+
+    /*------------------------------------------------*/
+
+    printline("\t\tCourse ID :",false,6);
+    printline(CourseID);
+    printline("\t\tCourse Name :",false,6);
+    printline(CourseName);
+    /**if(LoadCoursesFromFile())
+     {
+         for(unsigned int i=0; i<CoursesList.size(); ++i)
+         {
+             CoursesList[i].print();
+         }
+     }
+     else
+     {
+         printline("\n\tFile Not Found...");
+
+     }*/
+
+
 }
+
+bool Student::LoadCoursesFromFile()
+{
+    CoursesList.clear();
+    ifstream in("Courses/Courses.txt");
+    if(in)
+    {
+        while(!in.eof())
+        {
+            Courses c;
+            c.LoadFromFile(in);
+            CoursesList.push_back(c);
+        }
+        in.close();
+    }
+    else
+    {
+        return false;
+    }
+    return true;
+}
+
+
+void Student::assignCourseToStudent()
+{
+    if(LoadCoursesFromFile())
+    {
+        printline("\n\t\tCourses List...",1,14);
+        for(unsigned int i=0; i<CoursesList.size(); ++i)
+        {
+            CoursesList[i].print();
+        }
+        int n =-1;
+        do
+        {
+            string d;
+            printline("\n\t\tChoose Your Courses ID :",false,8);
+            cin>>d;
+            int flag = 0;
+            for(unsigned int i=0; i<CoursesList.size()-1; ++i)
+            {
+                if(d == CoursesList[i].getID())
+                {
+                    CourseID = CoursesList[i].getID();
+                    CourseName = CoursesList[i].getName();
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag)
+            {
+                printline("\n\t\tCourse Added Successfully To Student..:)\n");
+            }
+            else
+            {
+                printline("\n\t\tInvalid ID,Try again...\n");
+            }
+            printline("\n\t\t[1].Add Another :\n\t\t[0].Back :\n\t\tEnter Choice :",false,8);
+            cin>>n;
+        }
+        while(n!=0);
+    }
+    else
+    {
+        printline("\n\t\tFile Not Found ..:)\n");
+    }
+}
+
+

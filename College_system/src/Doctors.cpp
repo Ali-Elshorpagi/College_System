@@ -19,10 +19,6 @@ void Doctors::addCourses()
 
 
 }
-void Doctors::Print()
-{
-   // print doctor attribute
-}
 
 bool Doctors::signIn(string user,string pass)
 {
@@ -90,6 +86,7 @@ void Doctors::SaveToFile(ofstream& out)
         <<gender<<","
         <<type<<endl;
 }
+
 void Doctors::LoadFromFile(ifstream& in)
 {
     getline(in,username,',');
@@ -102,4 +99,34 @@ void Doctors::LoadFromFile(ifstream& in)
     getline(in,address,',');
     getline(in,gender,',');
     getline(in,type);
+}
+
+void Doctors::print()
+{
+    printline("\t\tType :",false);
+    printline(type);
+    printline("\n\t\tID :",false);
+    printline(id);
+    printline("\t\tName :",false);
+    printline(name);
+    printline("\t\tPhone :",false);
+    printline(phone);
+    printline("\t\tEmail :",false);
+    printline(email);
+    printline("\t\tGender :",false);
+    printline(gender);
+    printline("\t\tAddress :",false);
+    printline(address);
+    printline("\t\tBirthDay :",false);
+    printline(birthDate);
+}
+
+string Doctors::getID()
+{
+    return id;
+}
+
+string Doctors::getName()
+{
+    return name;
 }

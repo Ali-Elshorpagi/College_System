@@ -20,6 +20,33 @@ HandlingData::~HandlingData()
     delete [] staffLoad;
 }
 
+
+
+void HandlingData::print()
+{
+    loadcounter = 0;
+    ifstream in("StaffData/Students.txt");
+    if(in)
+    {
+        while(!in.eof())
+        {
+            staffLoad[loadcounter] = new Student;
+            staffLoad[loadcounter++]->LoadFromFile(in);
+        }
+        in.close();
+        for(int i=0; i<loadcounter-1; ++i)
+        {
+            staffLoad[i]->print();
+        }
+    }
+    else
+    {
+        printline("\n\tFile Not Found...");
+    }
+}
+
+
+
 bool HandlingData::sign_in(int flag)
 {
     string user,pass;
@@ -41,7 +68,7 @@ bool HandlingData::sign_in(int flag)
                 staffLoad[loadcounter++]->LoadFromFile(in);
             }
             in.close();
-            for(int i=0; i<loadcounter-1; ++i)
+            for(int i=0; i<loadcounter; ++i)
             {
                 if(staffLoad[i]->signIn(user,pass))
                 {
@@ -51,7 +78,7 @@ bool HandlingData::sign_in(int flag)
         }
         else
         {
-            printline("\n\tThere is No User Yet...");
+            printline("\n\tThere is No Users Yet...");
         }
         return false;
     }
@@ -78,7 +105,7 @@ bool HandlingData::sign_in(int flag)
         }
         else
         {
-            printline("\n\tThere is No User Yet...");
+            printline("\n\tThere is No Users Yet...");
         }
         return false;
     }
@@ -105,7 +132,34 @@ bool HandlingData::sign_in(int flag)
         }
         else
         {
-            printline("\n\tThere is No User Yet...");
+            printline("\n\tThere is No Users Yet...");
+        }
+        return false;
+    }
+    break;
+    case 4:
+    {
+        loadcounter = 0;
+        ifstream in("StaffData/Administrator.txt");
+        if(in)
+        {
+            while(!in.eof())
+            {
+                staffLoad[loadcounter] = new Administrator;
+                staffLoad[loadcounter++]->LoadFromFile(in);
+            }
+            in.close();
+            for(int i=0; i<loadcounter-1; ++i)
+            {
+                if(staffLoad[i]->signIn(user,pass))
+                {
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            printline("\n\tThere is No Users Yet...");
         }
         return false;
     }
@@ -148,5 +202,16 @@ void HandlingData::sign_up(int flag)
         out.close();
     }
     break;
+    case 4:
+    {
+        staff[staffcounter] = new Administrator;
+        staff[staffcounter]->signUP();
+        ofstream out;
+        out.open("StaffData/Administrator.txt",ios::app);
+        staff[staffcounter++]->SaveToFile(out);
+        out.close();
+    }
+    break;
     }
 }
+

@@ -1,8 +1,9 @@
-#ifndef DOCTORS_H
-#define DOCTORS_H
+#ifndef ADMINISTRATOR_H
+#define ADMINISTRATOR_H
+#include "StaffData.h"
+#include "Courses.h"
 
-#include"StaffData.h"
-class Doctors:public StaffData
+class Administrator: public StaffData
 {
 public:
     template <typename type>
@@ -10,21 +11,19 @@ public:
     {
         cout << msg << (end_line ? "\n" : "\t");
     }
-    Doctors();
-    virtual ~Doctors();
+
     virtual void signUP();
     virtual bool signIn(string,string);
     void SaveToFile(ofstream&);
     void LoadFromFile(ifstream&);
+    void assignCourseToDoctor();
     void print();
-    void AddSalary();
-    void addCourses();
-    string getID();
-    string getName();
 
+    Administrator();
+    virtual ~Administrator();
 private:
-    double Salalry;
-    int startYear;
+    Courses *coure;
+    static int counter;
 };
 
-#endif // DOCTORS_H
+#endif // ADMINISTRATOR_H

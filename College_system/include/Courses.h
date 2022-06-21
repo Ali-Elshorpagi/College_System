@@ -1,6 +1,8 @@
 #ifndef COURSES_H
 #define COURSES_H
 #include <iostream>
+#include "StaffData.h"
+#include "Doctors.h"
 #include <windows.h>
 
 using namespace std;
@@ -15,15 +17,24 @@ public:
         SetConsoleTextAttribute(cout_handle, color_code);
         cout << msg << (end_line ? "\n" : "\t");
     }
-
-
+    void addCoursesToDoctor();
+    void SaveToFile(ofstream&);
+    void LoadFromFile(ifstream&);
+    void print();
+    string getName();
+    string getID();
 
     Courses();
     virtual ~Courses();
 
-protected:
-
 private:
+    string id;
+    string name;
+    string hours;
+    string doctorName;
+    string doctorID;
+    StaffData **doc;
+    int loadcounter;
 };
 
 #endif // COURSES_H
