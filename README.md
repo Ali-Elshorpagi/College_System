@@ -3,7 +3,11 @@ College System is a basic software for managing College Data, such as Courses, S
 
 ## Demo
 1. Sign in
-*[Dctor](#Dctor)
+SIGN IN AS:
+* Doctor :
+* Student :
+* Teaching Assistant :
+* Administrator :
 2. Sign up
 
 ## There are more Details
