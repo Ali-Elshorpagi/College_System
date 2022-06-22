@@ -53,8 +53,10 @@ int get_menu_choise(string menu, int level = 0)
 
 int main()
 {
-    printline("START APPLICATION ....",1, 6);
-    wait_or_clear(1, 1);
+    printline("\n\tSTART APPLICATION ....",1, 6);
+    printline("\n----------------------------------",1,10);
+    printline("\n\tPowered By TACS TEAM ...",1,12);
+    wait_or_clear(3, 1);
     int c = -1;
     while (c != 0)
     {
@@ -70,6 +72,12 @@ int main()
             sub_menu_2_sign_up();
             break;
         case 0:
+            printline("\n--------------------------------------------------",1,10);
+            printline("\n\tPowered By TACS TEAM.....",1,10);
+            printline("\n\t>> Ali Abdulsalam Elshorpagi",1,6);
+            printline("\n\t>> Amr Sameh Mohamed",1,6);
+            printline("\n\t>> Ammar Gamal Gouda",1,6);
+            printline("\n\t>> Mohamed Said Ibraim",1,6);
             printline("\n\n\a\t\t\tGoodbye :)......\n\n\n\n\n\n", 1, 12);
             break;
         default:
