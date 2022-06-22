@@ -14,4 +14,5 @@ College System is a basic software for managing College Data, such as Courses, S
 * Teaching Assistant : 
 * Admininstrator :
 
-## There are more Details
+## Screenshots
+![Flow Chart](./FlowChart.png)
