@@ -35,3 +35,23 @@ void StaffData::printDoctors()
 
 }
 
+bool StaffData::LoadCoursesFromFile()
+{
+    CoursesList.clear();
+    ifstream in("DataBase/Courses/Courses.txt");
+    if(in)
+    {
+        while(!in.eof())
+        {
+            Courses c;
+            c.LoadFromFile(in);
+            CoursesList.push_back(c);
+        }
+        in.close();
+    }
+    else
+    {
+        return false;
+    }
+    return true;
+}

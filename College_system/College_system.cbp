@@ -35,6 +35,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Administrator.h" />
+		<Unit filename="include/Books.h" />
 		<Unit filename="include/Courses.h" />
 		<Unit filename="include/Doctors.h" />
 		<Unit filename="include/HandlingData.h" />
@@ -44,6 +45,7 @@
 		<Unit filename="include/Teaching_Assistant.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Administrator.cpp" />
+		<Unit filename="src/Books.cpp" />
 		<Unit filename="src/Courses.cpp" />
 		<Unit filename="src/Doctors.cpp" />
 		<Unit filename="src/HandlingData.cpp" />

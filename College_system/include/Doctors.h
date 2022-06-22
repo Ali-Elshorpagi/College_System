@@ -1,13 +1,15 @@
 #ifndef DOCTORS_H
 #define DOCTORS_H
-
 #include"StaffData.h"
+
 class Doctors:public StaffData
 {
 public:
+    HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
     template <typename type>
-    inline void printline(type msg, bool end_line = true)
+    inline void printline(type msg,bool end_line = true, int color_code=15)
     {
+        SetConsoleTextAttribute(cout_handle, color_code);
         cout << msg << (end_line ? "\n" : "\t");
     }
     Doctors();
@@ -18,15 +20,15 @@ public:
     void LoadFromFile(ifstream&);
     void AddExam();
     void AddAssignments();
+    void loadDoctorCourses();
+
     void print();
-    void AddSalary();
-    void addCourses();
+    void assignCourses();
     string getID();
     string getName();
 
 private:
-    double Salalry;
-    int startYear;
+    vector<Courses> DoctorCourses;
 };
 
 #endif // DOCTORS_H

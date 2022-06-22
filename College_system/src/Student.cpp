@@ -108,57 +108,16 @@ void Student::print()
     printline(address);
     printline("\t\tBirthDay :",false,6);
     printline(birthDate);
-
-    /*------------------------------------------------*/
-
-    printline("\t\tCourse ID :",false,6);
-    printline(CourseID);
-    printline("\t\tCourse Name :",false,6);
-    printline(CourseName);
-    /**if(LoadCoursesFromFile())
-     {
-         for(unsigned int i=0; i<CoursesList.size(); ++i)
-         {
-             CoursesList[i].print();
-         }
-     }
-     else
-     {
-         printline("\n\tFile Not Found...");
-
-     }*/
-
-
+    printCourses();
 }
 
-bool Student::LoadCoursesFromFile()
+void Student::assignCourses()
 {
-    CoursesList.clear();
-    ifstream in("DataBase/Courses/Courses.txt");
-    if(in)
-    {
-        while(!in.eof())
-        {
-            Courses c;
-            c.LoadFromFile(in);
-            CoursesList.push_back(c);
-        }
-        in.close();
-    }
-    else
-    {
-        return false;
-    }
-    return true;
-}
-
-
-void Student::assignCourseToStudent()
-{
+    string courseFile = "DataBase/StudentCourses/"+name+id+ ".txt";
     if(LoadCoursesFromFile())
     {
         printline("\n\t\tCourses List...",1,14);
-        for(unsigned int i=0; i<CoursesList.size(); ++i)
+        for(unsigned int i=0; i<CoursesList.size()-1; ++i)
         {
             CoursesList[i].print();
         }
@@ -173,8 +132,8 @@ void Student::assignCourseToStudent()
             {
                 if(d == CoursesList[i].getID())
                 {
-                    CourseID = CoursesList[i].getID();
-                    CourseName = CoursesList[i].getName();
+                    ofstream out(courseFile, ios::app);
+                    CoursesList[i].SaveToFile(out);
                     flag = 1;
                     break;
                 }
@@ -198,4 +157,37 @@ void Student::assignCourseToStudent()
     }
 }
 
+bool Student::loadStudentCourses()
+{
+    string courseFile = "DataBase/StudentCourses/"+name+id+ ".txt";
+    StudentCourses.clear();
+    ifstream in(courseFile);
+    if(in)
+    {
+        while(!in.eof())
+        {
+            Courses c;
+            c.LoadFromFile(in);
+            StudentCourses.push_back(c);
+        }
+        in.close();
+        return true;
+    }
+    else
+    {
+        printline("\n\t\tNo Assigned Courses Yet ..:)\n");
+    }
+    return false;
+}
+
+void Student::printCourses()
+{
+    if(loadStudentCourses())
+    {
+        for(unsigned int i=0; i<StudentCourses.size()-1; ++i)
+        {
+            StudentCourses[i].print();
+        }
+    }
+}
 

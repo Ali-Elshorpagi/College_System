@@ -10,12 +10,6 @@ Teaching_Assistant::~Teaching_Assistant()
 {
     //dtor
 }
-void Teaching_Assistant::addCourses()
-{
-}
-void Teaching_Assistant::addSalary()
-{
-}
 void Teaching_Assistant::print()
 {
     printline("\t\tType :",false);
@@ -131,5 +125,74 @@ void Teaching_Assistant::AddQuizzes()
     printline("\n\tPut Your Quizzes Here According To Academic Year..:)\n");
     Sleep(2000);
     ShellExecute(NULL, "open","DataBase\\Quizzes", NULL, NULL, SW_SHOW);
+}
+
+void Teaching_Assistant::assignCourses()
+{
+    string courseFile = "DataBase/TeachingAssistantCourses/"+name+id+ ".txt";
+    if(LoadCoursesFromFile())
+    {
+        printline("\n\t\tCourses List...",1,14);
+        for(unsigned int i=0; i<CoursesList.size()-1; ++i)
+        {
+            CoursesList[i].print();
+        }
+        int n =-1;
+        do
+        {
+            string d;
+            printline("\n\t\tChoose Your Courses ID :",false,8);
+            cin>>d;
+            int flag = 0;
+            for(unsigned int i=0; i<CoursesList.size()-1; ++i)
+            {
+                if(d == CoursesList[i].getID())
+                {
+                    ofstream out(courseFile, ios::app);
+                    CoursesList[i].SaveToFile(out);
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag)
+            {
+                printline("\n\t\tCourse Added Successfully To Teaching Assistant..:)\n");
+            }
+            else
+            {
+                printline("\n\t\tInvalid ID,Try again...\n");
+            }
+            printline("\n\t\t[1].Add Another :\n\t\t[0].Back :\n\t\tEnter Choice :",false,8);
+            cin>>n;
+        }
+        while(n!=0);
+    }
+    else
+    {
+        printline("\n\t\tFile Not Found ..:)\n");
+    }
+}
+
+
+void Teaching_Assistant::loadTACourses()
+{
+    string courseFile = "DataBase/TeachingAssistantCourses/"+name+id+ ".txt";
+    TACourses.clear();
+    ifstream in(courseFile);
+    if(in)
+    {
+        while(!in.eof())
+        {
+            Courses c;
+            c.LoadFromFile(in);
+            TACourses.push_back(c);
+        }
+        in.close();
+    }
+    else
+    {
+        printline("\n\t\tFile Not Found ..:)\n");
+    }
+    return ;
 }
 

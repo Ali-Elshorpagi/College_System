@@ -19,15 +19,14 @@ public:
     void signUP();
     bool signIn(string,string);
     void print();
-    bool LoadCoursesFromFile();
-    void assignCourseToStudent();
+    void printCourses();
+    bool loadStudentCourses();
+    void assignCourses();
     Student();
     virtual ~Student();
 
 private:
-    vector <Courses> CoursesList;
-    string CourseName;
-    string CourseID;
+    vector <Courses> StudentCourses;
 };
 
 #endif // STUDENT_H

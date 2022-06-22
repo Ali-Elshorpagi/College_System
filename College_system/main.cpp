@@ -4,25 +4,15 @@
 #include <cstring>
 #include "HandlingData.h"
 #include "ShowData.h"
-#include "Administrator.h"
-#include "Student.h"
 
 using namespace std;
 
-void sub_sub_menu_1_sign_in_stduent();
-void sub_sub_menu_1_sign_in_teaching_assistant();
-void sub_sub_menu_1_sign_in_doctor();
 void sub_menu_1_sign_in();
 void sub_menu_2_sign_up();
 
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 
-Teaching_Assistant teass;
-Doctors doc;
-Student stu;
-Administrator admin;
 HandlingData h1;
-ShowData showdata;
 
 inline void wait_or_clear(unsigned int sec, bool clear_screen = false)
 {
@@ -43,7 +33,6 @@ inline void print_try_again()
     printline("\n\n\n\aInvalid Choice Try Again!!!!!!!!", 1, 4);
     wait_or_clear(1, 1);
 }
-
 int get_menu_choise(string menu, int level = 0)
 {
     stringstream X(menu);
@@ -62,7 +51,6 @@ int get_menu_choise(string menu, int level = 0)
     return c;
 }
 
-/** Main Function */
 int main()
 {
     printline("START APPLICATION ....",1, 6);
@@ -92,143 +80,6 @@ int main()
     return 0;
 }
 
-void sub_sub_menu_1_sign_in_stduent()
-{
-    int c = -1;
-    while (c != 0)
-    {
-        wait_or_clear(0, 1);
-        printline("\n\nMAIN MENU -> Sing in -> Student ....", 1, 14);
-        c = get_menu_choise("Show Exams,Show Tables,Show Assignments,Show Practical Exams,Show Quizzes,Add Courses", 2);
-        switch (c)
-        {
-        case 1:
-            showdata.ShowExams();
-            system("pause");
-            break;
-        case 2:
-            showdata.ShowTables();
-            system("pause");
-            break;
-        case 3:
-            showdata.ShowAssignments();
-            system("pause");
-            break;
-        case 4:
-            showdata.ShowPracticalExams();
-            system("pause");
-            break;
-        case 5:
-            showdata.ShowQuizzes();
-            system("pause");
-            break;
-        case 6:
-            stu.assignCourseToStudent();
-            system("pause");
-            break;
-        case 0:
-            return;
-        default:
-            print_try_again();
-        }
-    }
-}
-
-void sub_sub_menu_1_sign_in_teaching_assistant()
-{
-    int c = -1;
-    while (c != 0)
-    {
-        wait_or_clear(0, 1);
-        printline("\n\nMAIN MENU -> Sing in -> Teaching Assistant ....", 1, 14);
-        c = get_menu_choise("Add Practical Exam,Add Quizzes,Print Students Data", 2);
-        switch (c)
-        {
-        case 1:
-            teass.AddPracticalExam();
-            system("pause");
-            break;
-        case 2:
-            teass.AddQuizzes();
-            system("pause");
-            break;
-        case 3:
-            h1.print();
-            system("pause");
-            break;
-        case 0:
-            return;
-        default:
-            print_try_again();
-        }
-    }
-}
-
-void sub_sub_menu_1_sign_in_doctor()
-{
-    int c = -1;
-    while (c != 0)
-    {
-        wait_or_clear(0, 1);
-        printline("\n\nMAIN MENU -> Sing in -> Doctor ....", 1, 14);
-        c = get_menu_choise("Add Exam,Add Assignments,Print Students Data", 2);
-        switch (c)
-        {
-        case 1:
-            doc.AddExam();
-            system("pause");
-            break;
-        case 2:
-            doc.AddAssignments();
-            system("pause");
-            break;
-        case 3:
-            // printline("\n\t\tEnter Here Add Print Students Data Fun");
-            h1.print();
-            system("pause");
-            break;
-        case 0:
-            return;
-        default:
-            print_try_again();
-        }
-    }
-}
-
-void sub_sub_menu_1_sign_in_admin()
-{
-    int c = -1;
-    while (c != 0)
-    {
-        wait_or_clear(0, 1);
-        printline("\n\nMAIN MENU -> Sing in -> Doctor ....", 1, 14);
-        c = get_menu_choise("Add Courses,Add Fun 1,Add Fun 2,Add Fun 3",2);
-        switch (c)
-        {
-        case 1:
-            admin.assignCourseToDoctor();
-            system("pause");
-            break;
-        case 2:
-            printline("\n\t\tEnter Here Your Fun");
-            system("pause");
-            break;
-        case 3:
-            printline("\n\t\tEnter Here Your Fun");
-            system("pause");
-            break;
-        case 4:
-            printline("\n\t\tEnter Here Your Fun");
-            system("pause");
-            break;
-        case 0:
-            return;
-        default:
-            print_try_again();
-        }
-    }
-}
-
 void sub_menu_1_sign_in()
 {
     int c = -1;
@@ -245,9 +96,6 @@ void sub_menu_1_sign_in()
             printline("\n\nMAIN MENU -> Sing IN -> DOCTOR ....", 1, 14);
             if(h1.sign_in(c))
             {
-                printline("\n\tSuccessfully Logging...^_^",1,2);
-                Sleep(1000);
-                sub_sub_menu_1_sign_in_doctor();
             }
             else
             {
@@ -262,9 +110,6 @@ void sub_menu_1_sign_in()
             printline("\n\nMAIN MENU -> Sing IN -> STUDENT ....", 1, 14);
             if(h1.sign_in(c))
             {
-                printline("\n\tSuccessfully Logging...^_^",1,2);
-                Sleep(1000);
-                sub_sub_menu_1_sign_in_stduent();
             }
             else
             {
@@ -279,9 +124,6 @@ void sub_menu_1_sign_in()
             printline("\n\nMAIN MENU -> Sing IN -> TEACHING ASSISANT ....", 1, 14);
             if(h1.sign_in(c))
             {
-                printline("\n\tSuccessfully Logging...^_^",1,2);
-                Sleep(1000);
-                sub_sub_menu_1_sign_in_teaching_assistant();
             }
             else
             {
@@ -296,9 +138,6 @@ void sub_menu_1_sign_in()
             printline("\n\nMAIN MENU -> Sing IN -> Administrator ....", 1, 14);
             if(h1.sign_in(c))
             {
-                printline("\n\tSuccessfully Logging...^_^",1,2);
-                Sleep(1000);
-                sub_sub_menu_1_sign_in_admin();
             }
             else
             {

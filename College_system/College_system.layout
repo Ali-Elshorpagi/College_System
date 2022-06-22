@@ -2,44 +2,29 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="include\Teaching_Assistant.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Student.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="559" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="include\HandlingData.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="597" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="src\ShowData.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="521" topLine="12" />
+			<Cursor1 position="3033" topLine="111" />
 		</Cursor>
 	</File>
 	<File name="src\Teaching_Assistant.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1468" topLine="57" />
+			<Cursor1 position="2703" topLine="105" />
 		</Cursor>
+	</File>
+	<File name="src\ShowData.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23233" topLine="239" />
+		</Cursor>
+		<Folding>
+			<Collapse line="13" />
+			<Collapse line="143" />
+			<Collapse line="274" />
+		</Folding>
 	</File>
 	<File name="include\StaffData.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="497" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="include\Doctors.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="435" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Doctors.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1090" topLine="82" />
-		</Cursor>
-	</File>
-	<File name="include\Student.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="415" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\StaffData.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
@@ -47,37 +32,67 @@
 			<Cursor1 position="328" topLine="13" />
 		</Cursor>
 	</File>
-	<File name="include\ShowData.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Courses.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="123" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Student.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1249" topLine="49" />
-		</Cursor>
-	</File>
-	<File name="src\HandlingData.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2052" topLine="82" />
+			<Cursor1 position="868" topLine="82" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5724" topLine="0" />
+			<Cursor1 position="512" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="26" />
-			<Collapse line="34" />
-			<Collapse line="40" />
+			<Collapse line="27" />
+			<Collapse line="35" />
+			<Collapse line="41" />
 			<Collapse line="47" />
 			<Collapse line="66" />
-			<Collapse line="96" />
-			<Collapse line="127" />
-			<Collapse line="158" />
-			<Collapse line="190" />
-			<Collapse line="226" />
-			<Collapse line="313" />
+			<Collapse line="95" />
+			<Collapse line="137" />
+			<Collapse line="167" />
+			<Collapse line="198" />
+			<Collapse line="232" />
+			<Collapse line="318" />
 		</Folding>
+	</File>
+	<File name="include\Student.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="415" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Teaching_Assistant.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="83" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="src\Administrator.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="348" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="src\Doctors.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2763" topLine="118" />
+		</Cursor>
+	</File>
+	<File name="include\ShowData.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="562" topLine="2" />
+		</Cursor>
+	</File>
+	<File name="include\HandlingData.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="597" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="include\Doctors.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="485" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="src\HandlingData.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3228" topLine="0" />
+		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

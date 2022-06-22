@@ -13,9 +13,9 @@ Administrator::~Administrator()
     delete []coure;
 }
 
-void Administrator::assignCourseToDoctor()
+void Administrator::AddCourses()
 {
-    coure[counter].addCoursesToDoctor();
+    coure[counter].addCourses();
     ofstream out;
     out.open("DataBase/Courses/Courses.txt",ios::app);
     coure[counter++].SaveToFile(out);

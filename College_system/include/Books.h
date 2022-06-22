@@ -1,12 +1,11 @@
-#ifndef COURSES_H
-#define COURSES_H
+#ifndef BOOKS_H
+#define BOOKS_H
 #include <iostream>
-#include <fstream>
 #include <windows.h>
 
 using namespace std;
 
-class Courses
+class Books
 {
 public:
     HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -16,20 +15,11 @@ public:
         SetConsoleTextAttribute(cout_handle, color_code);
         cout << msg << (end_line ? "\n" : "\t");
     }
-    void SaveToFile(ofstream&);
-    void LoadFromFile(ifstream&);
-    void print();
-    void addCourses();
-    string getName();
-    string getID();
 
-    Courses();
-    virtual ~Courses();
-
-private:
-    string id;
-    string name;
-    string hours;
+    void addBooks();
+    void ShowBooks();
+    Books();
+    virtual ~Books();
 };
 
-#endif // COURSES_H
+#endif // BOOKS_H

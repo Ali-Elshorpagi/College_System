@@ -10,15 +10,6 @@ Doctors::~Doctors()
 {
     //dtor
 }
-void Doctors::AddSalary()
-{
-
-}
-void Doctors::addCourses()
-{
-
-
-}
 
 bool Doctors::signIn(string user,string pass)
 {
@@ -134,6 +125,78 @@ void Doctors::AddAssignments()
     Sleep(2000);
     ShellExecute(NULL, "open","DataBase\\Assignments", NULL, NULL, SW_SHOW);
 }
+
+
+void Doctors::assignCourses()
+{
+    string courseFile = "DataBase/DoctorCourses/"+name+id+ ".txt";
+    if(LoadCoursesFromFile())
+    {
+        printline("\n\t\tCourses List...",1,14);
+        for(unsigned int i=0; i<CoursesList.size()-1; ++i)
+        {
+            CoursesList[i].print();
+        }
+        int n =-1;
+        do
+        {
+            string d;
+            printline("\n\t\tChoose Your Courses ID :",false,8);
+            cin>>d;
+            int flag = 0;
+            for(unsigned int i=0; i<CoursesList.size()-1; ++i)
+            {
+                if(d == CoursesList[i].getID())
+                {
+                    ofstream out(courseFile, ios::app);
+                    CoursesList[i].SaveToFile(out);
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag)
+            {
+                printline("\n\t\tCourse Added Successfully To Doctor..:)\n");
+            }
+            else
+            {
+                printline("\n\t\tInvalid ID,Try again...\n");
+            }
+            printline("\n\t\t[1].Add Another :\n\t\t[0].Back :\n\t\tEnter Choice :",false,8);
+            cin>>n;
+        }
+        while(n!=0);
+    }
+    else
+    {
+        printline("\n\t\tFile Not Found ..:)\n");
+    }
+}
+
+
+void Doctors::loadDoctorCourses()
+{
+    string courseFile = "DataBase/DoctorCourses/"+name+id+ ".txt";
+    DoctorCourses.clear();
+    ifstream in(courseFile);
+    if(in)
+    {
+        while(!in.eof())
+        {
+            Courses c;
+            c.LoadFromFile(in);
+            DoctorCourses.push_back(c);
+        }
+        in.close();
+    }
+    else
+    {
+        printline("\n\t\tFile Not Found ..:)\n");
+    }
+    return ;
+}
+
+
 
 string Doctors::getID()
 {
