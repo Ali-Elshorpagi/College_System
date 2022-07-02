@@ -21,4 +21,4 @@ College System is a basic software for managing College Data, such as Courses, S
 ![Example screenshot](./img/FlowChart.png)
 
 ## UML Diagram
-(./img/UML.png)
+!(./img/UML.png)
