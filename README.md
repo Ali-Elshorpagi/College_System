@@ -11,8 +11,8 @@ College System is a basic software for managing College Data, such as Courses, S
 * [Ammar Gamal](https://github.com/Ammar120560)
 
 # Demo
-### Sign in
-### Sign UP
+#### Sign in
+#### Sign UP
 
 ## Flow Chart
 ![Example screenshot](./img/FlowChart.png)
