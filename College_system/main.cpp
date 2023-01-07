@@ -93,12 +93,10 @@ int main()
 void sign_in_case(int c)
 {
     if(h1.sign_in(c))
-    {
-    }
+        continue;
     else
-    {
         printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
-    }
+
     system("pause");
 }
 
