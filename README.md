@@ -7,7 +7,7 @@ College System is a basic software for managing College Data, such as Courses, S
 # Developers 
 * [Ali Elshorpagi](https://github.com/Ali-Elshorpagi)
 * [Mohamed Said](https://github.com/Mohamed03Said)
-* [Amr Elbaz](https://github.com/AmrAlbaz-34)
+* [Amr Elbaz](https://github.com/AmrAlbaz34)
 * [Ammar Gamal](https://github.com/Ammar120560)
 
 # Demo
