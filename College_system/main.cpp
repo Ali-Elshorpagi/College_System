@@ -9,6 +9,8 @@ using namespace std;
 
 void sub_menu_1_sign_in();
 void sub_menu_2_sign_up();
+void sign_in_case(int);
+void sign_up_case(int);
 
 HANDLE cout_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -88,6 +90,23 @@ int main()
     return 0;
 }
 
+void sign_in_case(int c)
+{
+    if(h1.sign_in(c))
+        continue;
+    else
+        printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
+
+    system("pause");
+}
+
+void sign_up_case(int c)
+{
+    h1.sign_up(c);
+    printline("\n\tRegistered tSuccessfully...^_^\n",1,2);
+    system("pause");
+}
+
 void sub_menu_1_sign_in()
 {
     int c = -1;
@@ -102,56 +121,28 @@ void sub_menu_1_sign_in()
         {
             system("cls");
             printline("\n\nMAIN MENU -> Sing IN -> DOCTOR ....", 1, 14);
-            if(h1.sign_in(c))
-            {
-            }
-            else
-            {
-                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
-            }
-            system("pause");
+            sign_in_case(c);
         }
         break;
         case 2:
         {
             system("cls");
             printline("\n\nMAIN MENU -> Sing IN -> STUDENT ....", 1, 14);
-            if(h1.sign_in(c))
-            {
-            }
-            else
-            {
-                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
-            }
+            sign_in_case(c);
         }
-        system("pause");
         break;
         case 3:
         {
             system("cls");
             printline("\n\nMAIN MENU -> Sing IN -> TEACHING ASSISANT ....", 1, 14);
-            if(h1.sign_in(c))
-            {
-            }
-            else
-            {
-                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
-            }
-            system("pause");
+            sign_in_case(c);
         }
         break;
         case 4:
         {
             system("cls");
             printline("\n\nMAIN MENU -> Sing IN -> Administrator ....", 1, 14);
-            if(h1.sign_in(c))
-            {
-            }
-            else
-            {
-                printline("\n\t Invalid Username or Password, try again..:)\n",1,12);
-            }
-            system("pause");
+            sign_in_case(c);
         }
         break;
         case 0:
@@ -175,23 +166,17 @@ void sub_menu_2_sign_up()
         case 1:
             system("cls");
             printline("\n\nMAIN MENU -> SIGN UP -> DOCTOR ....", 1, 14);
-            h1.sign_up(c);
-            printline("\n\tRegistered tSuccessfully...^_^\n",1,2);
-            system("pause");
+            sign_up_case(c);
             break;
         case 2:
             system("cls");
             printline("\n\nMAIN MENU -> SIGN UP -> STUDENT ....", 1, 14);
-            h1.sign_up(c);
-            printline("\n\tRegistered tSuccessfully...^_^\n",1,2);
-            system("pause");
+            sign_up_case(c);
             break;
         case 3:
             system("cls");
             printline("\n\nMAIN MENU -> SIGN UP -> TEACHING ASSISANT ....", 1, 14);
-            h1.sign_up(c);
-            printline("\n\tRegistered tSuccessfully...^_^\n",1,2);
-            system("pause");
+            sign_up_case(c);
             break;
         case 4:
             system("cls");
